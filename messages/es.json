@@ -1,0 +1,69 @@
+{
+    "navbar": {
+        "logo": "ParKpool",
+        "solutions": "Soluciones",
+        "security": "Seguridad",
+        "pricing": "Precios",
+        "cta": "Agendar Demo"
+    },
+    "hero": {
+        "title": "El Sistema Operativo para Empresas de Valet Parking.",
+        "subtitle": "Digitaliza tu operación, elimina el fraude de efectivo y reduce tiempos de entrega en un 40%. Control total desde el celular.",
+        "cta": "Empezar Ahora"
+    },
+    "solutions": {
+        "title": "La Solución Completa para Valet Parking",
+        "subtitle": "Controla cada aspecto de tu operación desde una plataforma centralizada",
+        "card1Title": "Control Financiero",
+        "card1Description": "Cierres de caja automáticos y auditoría en tiempo real. Elimina el fraude de efectivo y obtén visibilidad total de tus ingresos.",
+        "card2Title": "Seguridad Total",
+        "card2Description": "Registro fotográfico de daños y tracking de valets. Protege a tus clientes y reduce reclamos con evidencia digital.",
+        "card3Title": "Operación sin Papel",
+        "card3Description": "Tickets digitales vía SMS/WhatsApp. Reduce costos operativos y ofrece una experiencia moderna a tus clientes."
+    },
+    "socialProof": {
+        "title": "Confían en nosotros"
+    },
+    "howItWorks": {
+        "title": "¿Cómo Funciona?",
+        "subtitle": "Proceso simple en 3 pasos que transforma tu operación",
+        "step1Title": "Recepción del Vehículo",
+        "step1Description": "El valet recibe el auto, toma fotos del estado y envía un ticket digital al cliente vía SMS o WhatsApp.",
+        "step2Title": "Solicitud y Pago",
+        "step2Description": "El cliente pide su vehículo y paga desde su celular. El manager recibe la notificación en tiempo real.",
+        "step3Title": "Asignación y Entrega",
+        "step3Description": "El manager asigna la orden al valet disponible. El valet recibe la ubicación y entrega el auto en tiempo récord."
+    },
+    "finalCta": {
+        "title": "¿Listo para modernizar tu parking?",
+        "subtitle": "Únete a las empresas líderes que ya están transformando su operación con ParKpool",
+        "cta": "Contactar Ventas"
+    },
+    "footer": {
+        "terms": "Términos y Condiciones",
+        "privacy": "Política de Privacidad",
+        "contact": "Contacto",
+        "copyright": "© 2025 ParKpool. Todos los derechos reservados."
+    },
+    "modal": {
+        "title": "Agenda tu Demo",
+        "subtitle": "Descubre cómo ParKpool moderniza tu operación",
+        "nameLabel": "Nombre completo",
+        "namePlaceholder": "Juan Pérez",
+        "companyLabel": "Empresa / Parking",
+        "companyPlaceholder": "JV Parking Logistic",
+        "emailLabel": "Email corporativo",
+        "emailPlaceholder": "juan@empresa.com",
+        "phoneLabel": "Teléfono (opcional)",
+        "phonePlaceholder": "+57 300 123 4567",
+        "termsText": "He leído y acepto los",
+        "termsLink": "Términos y Condiciones",
+        "termsAnd": "y la Política de Privacidad",
+        "submitButton": "Solicitar Demo Gratuita",
+        "submitting": "Enviando...",
+        "successTitle": "¡Solicitud Recibida!",
+        "successMessage": "Nuestro equipo te contactará pronto",
+        "errorConnection": "Error de conexión. Por favor intenta de nuevo.",
+        "errorGeneric": "Error al enviar la solicitud"
+    }
+}

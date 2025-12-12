@@ -1,0 +1,69 @@
+{
+    "navbar": {
+        "logo": "ParKpool",
+        "solutions": "Solutions",
+        "security": "Security",
+        "pricing": "Pricing",
+        "cta": "Schedule Demo"
+    },
+    "hero": {
+        "title": "The Operating System for Valet Parking Companies.",
+        "subtitle": "Digitize your operation, eliminate cash fraud, and reduce delivery times by 40%. Total control from your phone.",
+        "cta": "Get Started"
+    },
+    "solutions": {
+        "title": "The Complete Solution for Valet Parking",
+        "subtitle": "Control every aspect of your operation from a centralized platform",
+        "card1Title": "Financial Control",
+        "card1Description": "Automatic cash closing and real-time auditing. Eliminate cash fraud and gain full visibility of your revenue.",
+        "card2Title": "Total Security",
+        "card2Description": "Photographic damage registry and valet tracking. Protect your customers and reduce claims with digital evidence.",
+        "card3Title": "Paperless Operation",
+        "card3Description": "Digital tickets via SMS/WhatsApp. Reduce operational costs and offer a modern experience to your customers."
+    },
+    "socialProof": {
+        "title": "Trusted by"
+    },
+    "howItWorks": {
+        "title": "How It Works?",
+        "subtitle": "Simple 3-step process that transforms your operation",
+        "step1Title": "Vehicle Reception",
+        "step1Description": "The valet receives the car, takes photos of its condition, and sends a digital ticket to the customer via SMS or WhatsApp.",
+        "step2Title": "Request and Payment",
+        "step2Description": "The customer requests their vehicle and pays from their phone. The manager receives the notification in real-time.",
+        "step3Title": "Assignment and Delivery",
+        "step3Description": "The manager assigns the order to the available valet. The valet receives the location and delivers the car in record time."
+    },
+    "finalCta": {
+        "title": "Ready to modernize your parking?",
+        "subtitle": "Join leading companies already transforming their operation with ParKpool",
+        "cta": "Contact Sales"
+    },
+    "footer": {
+        "terms": "Terms and Conditions",
+        "privacy": "Privacy Policy",
+        "contact": "Contact",
+        "copyright": "© 2025 ParKpool. All rights reserved."
+    },
+    "modal": {
+        "title": "Schedule Your Demo",
+        "subtitle": "Discover how ParKpool modernizes your operation",
+        "nameLabel": "Full name",
+        "namePlaceholder": "John Doe",
+        "companyLabel": "Company / Parking",
+        "companyPlaceholder": "Elite Valet Services",
+        "emailLabel": "Corporate email",
+        "emailPlaceholder": "john@company.com",
+        "phoneLabel": "Phone (optional)",
+        "phonePlaceholder": "+1 300 123 4567",
+        "termsText": "I have read and accept the",
+        "termsLink": "Terms and Conditions",
+        "termsAnd": "and Privacy Policy",
+        "submitButton": "Request Free Demo",
+        "submitting": "Sending...",
+        "successTitle": "Request Received!",
+        "successMessage": "Our team will contact you soon",
+        "errorConnection": "Connection error. Please try again.",
+        "errorGeneric": "Error sending request"
+    }
+}
