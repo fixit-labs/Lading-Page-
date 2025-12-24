@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
-import { prisma } from '@/lib/prisma';
 
 // Validation schema
 const leadSchema = z.object({
@@ -16,35 +15,16 @@ export async function POST(request: NextRequest) {
         const body = await request.json();
         const validatedData = leadSchema.parse(body);
 
-        // Check if email already exists
-        const existingLead = await prisma.lead.findUnique({
-            where: { email: validatedData.email },
-        });
-
-        if (existingLead) {
-            return NextResponse.json(
-                { error: 'Este email ya está registrado' },
-                { status: 400 }
-            );
-        }
-
-        // Create new lead
-        const lead = await prisma.lead.create({
-            data: {
-                name: validatedData.name,
-                email: validatedData.email,
-                companyName: validatedData.companyName,
-                phone: validatedData.phone || null,
-                status: 'NEW',
-            },
-        });
+        // TODO: Integrate with database when ready
+        // For now, just log the lead and return success
+        console.log('New lead received:', validatedData);
 
         // Return success
         return NextResponse.json(
             {
                 success: true,
                 message: '¡Gracias! Te contactaremos pronto',
-                leadId: lead.id,
+                leadId: 'temp-' + Date.now(),
             },
             { status: 201 }
         );
