@@ -23,9 +23,7 @@ export default function RootLayout({
                 />
             </head>
             <body>
-                <LocaleProvider>
-                    {children}
-                </LocaleProvider>
+                {children}
             </body>
         </html>
     );
