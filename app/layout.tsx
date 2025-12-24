@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import { LocaleProvider } from '@/contexts/LocaleContext';
 
 export const metadata: Metadata = {
     title: 'ParKpool - El Sistema Operativo para Empresas de Valet Parking',
@@ -21,7 +22,11 @@ export default function RootLayout({
                     rel="stylesheet"
                 />
             </head>
-            <body>{children}</body>
+            <body>
+                <LocaleProvider>
+                    {children}
+                </LocaleProvider>
+            </body>
         </html>
     );
 }
