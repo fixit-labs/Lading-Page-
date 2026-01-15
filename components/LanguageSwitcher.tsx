@@ -4,7 +4,11 @@ import { Globe } from 'lucide-react';
 import { useState } from 'react';
 import { useLocale } from '../contexts/LocaleContext';
 
-export default function LanguageSwitcher() {
+interface LanguageSwitcherProps {
+    variant?: 'light' | 'dark';
+}
+
+export default function LanguageSwitcher({ variant = 'light' }: LanguageSwitcherProps) {
     const { locale, setLocale } = useLocale();
     const [isOpen, setIsOpen] = useState(false);
 
@@ -13,11 +17,15 @@ export default function LanguageSwitcher() {
         setIsOpen(false);
     };
 
+    const buttonStyles = variant === 'light'
+        ? 'text-white hover:text-azure-blue hover:bg-white/10'
+        : 'text-midnight-navy hover:text-azure-blue hover:bg-midnight-navy/10';
+
     return (
         <div className="relative">
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="flex items-center gap-2 px-3 py-2 rounded-xl text-sm font-medium text-midnight-navy hover:text-azure-blue hover:bg-soft-gray/50 transition-all"
+                className={`flex items-center gap-2 px-3 py-2 rounded-xl text-sm font-medium transition-all ${buttonStyles}`}
                 aria-label="Change language"
             >
                 <Globe className="w-4 h-4" />

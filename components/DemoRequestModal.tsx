@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { X, Loader2, CheckCircle } from 'lucide-react';
+import { useTranslations } from '@/hooks/useTranslations';
 
 interface DemoRequestModalProps {
     isOpen: boolean;
@@ -9,6 +10,7 @@ interface DemoRequestModalProps {
 }
 
 export default function DemoRequestModal({ isOpen, onClose }: DemoRequestModalProps) {
+    const t = useTranslations();
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -47,11 +49,11 @@ export default function DemoRequestModal({ isOpen, onClose }: DemoRequestModalPr
                 }, 2500);
             } else {
                 setSubmitStatus('error');
-                setErrorMessage(data.error || 'Error al enviar la solicitud');
+                setErrorMessage(data.error || t.modal.errorGeneric);
             }
         } catch (error) {
             setSubmitStatus('error');
-            setErrorMessage('Error de conexión. Por favor intenta de nuevo.');
+            setErrorMessage(t.modal.errorConnection);
         } finally {
             setIsSubmitting(false);
         }
@@ -104,10 +106,10 @@ export default function DemoRequestModal({ isOpen, onClose }: DemoRequestModalPr
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start' }}>
                             <div>
                                 <h3 style={{ fontSize: '1.5rem', fontWeight: '900', color: '#0B2848', marginBottom: '0.25rem' }}>
-                                    Agenda tu Demo
+                                    {t.modal.title}
                                 </h3>
                                 <p style={{ fontSize: '0.875rem', color: '#6b7280' }}>
-                                    Descubre cómo ParKpool moderniza tu operación
+                                    {t.modal.subtitle}
                                 </p>
                             </div>
                             <button
@@ -144,10 +146,10 @@ export default function DemoRequestModal({ isOpen, onClose }: DemoRequestModalPr
                                     <CheckCircle style={{ width: '2rem', height: '2rem', color: '#16a34a' }} />
                                 </div>
                                 <h4 style={{ fontSize: '1.125rem', fontWeight: 'bold', color: '#0B2848', marginBottom: '0.5rem' }}>
-                                    ¡Solicitud Recibida!
+                                    {t.modal.successTitle}
                                 </h4>
                                 <p style={{ color: '#6b7280' }}>
-                                    Nuestro equipo te contactará pronto
+                                    {t.modal.successMessage}
                                 </p>
                             </div>
                         )}
@@ -172,7 +174,7 @@ export default function DemoRequestModal({ isOpen, onClose }: DemoRequestModalPr
                             <form onSubmit={handleSubmit}>
                                 <div style={{ marginBottom: '1rem' }}>
                                     <label htmlFor="name" style={{ display: 'block', fontSize: '0.875rem', fontWeight: 'bold', color: '#0B2848', marginBottom: '0.5rem' }}>
-                                        Nombre completo *
+                                        {t.modal.nameLabel} *
                                     </label>
                                     <input
                                         id="name"
@@ -181,7 +183,7 @@ export default function DemoRequestModal({ isOpen, onClose }: DemoRequestModalPr
                                         required
                                         value={formData.name}
                                         onChange={handleChange}
-                                        placeholder="Juan Pérez"
+                                        placeholder={t.modal.namePlaceholder}
                                         style={{
                                             width: '100%',
                                             padding: '0.75rem 1rem',
@@ -195,7 +197,7 @@ export default function DemoRequestModal({ isOpen, onClose }: DemoRequestModalPr
 
                                 <div style={{ marginBottom: '1rem' }}>
                                     <label htmlFor="companyName" style={{ display: 'block', fontSize: '0.875rem', fontWeight: 'bold', color: '#0B2848', marginBottom: '0.5rem' }}>
-                                        Empresa / Parking *
+                                        {t.modal.companyLabel} *
                                     </label>
                                     <input
                                         id="companyName"
@@ -204,7 +206,7 @@ export default function DemoRequestModal({ isOpen, onClose }: DemoRequestModalPr
                                         required
                                         value={formData.companyName}
                                         onChange={handleChange}
-                                        placeholder="JV Parking Logistic"
+                                        placeholder={t.modal.companyPlaceholder}
                                         style={{
                                             width: '100%',
                                             padding: '0.75rem 1rem',
@@ -218,7 +220,7 @@ export default function DemoRequestModal({ isOpen, onClose }: DemoRequestModalPr
 
                                 <div style={{ marginBottom: '1rem' }}>
                                     <label htmlFor="email" style={{ display: 'block', fontSize: '0.875rem', fontWeight: 'bold', color: '#0B2848', marginBottom: '0.5rem' }}>
-                                        Email corporativo *
+                                        {t.modal.emailLabel} *
                                     </label>
                                     <input
                                         id="email"
@@ -227,7 +229,7 @@ export default function DemoRequestModal({ isOpen, onClose }: DemoRequestModalPr
                                         required
                                         value={formData.email}
                                         onChange={handleChange}
-                                        placeholder="juan@empresa.com"
+                                        placeholder={t.modal.emailPlaceholder}
                                         style={{
                                             width: '100%',
                                             padding: '0.75rem 1rem',
@@ -241,7 +243,7 @@ export default function DemoRequestModal({ isOpen, onClose }: DemoRequestModalPr
 
                                 <div style={{ marginBottom: '1.5rem' }}>
                                     <label htmlFor="phone" style={{ display: 'block', fontSize: '0.875rem', fontWeight: 'bold', color: '#0B2848', marginBottom: '0.5rem' }}>
-                                        Teléfono (opcional)
+                                        {t.modal.phoneLabel}
                                     </label>
                                     <input
                                         id="phone"
@@ -249,7 +251,7 @@ export default function DemoRequestModal({ isOpen, onClose }: DemoRequestModalPr
                                         type="tel"
                                         value={formData.phone}
                                         onChange={handleChange}
-                                        placeholder="+57 300 123 4567"
+                                        placeholder={t.modal.phonePlaceholder}
                                         style={{
                                             width: '100%',
                                             padding: '0.75rem 1rem',
@@ -277,7 +279,7 @@ export default function DemoRequestModal({ isOpen, onClose }: DemoRequestModalPr
                                             }}
                                         />
                                         <span style={{ fontSize: '0.875rem', color: '#0B2848', lineHeight: '1.5' }}>
-                                            He leído y acepto los{' '}
+                                            {t.modal.termsText}{' '}
                                             <a
                                                 href="/terms"
                                                 target="_blank"
@@ -289,9 +291,9 @@ export default function DemoRequestModal({ isOpen, onClose }: DemoRequestModalPr
                                                 }}
                                                 onClick={(e) => e.stopPropagation()}
                                             >
-                                                Términos y Condiciones
+                                                {t.modal.termsLink}
                                             </a>
-                                            {' '}y la Política de Privacidad
+                                            {' '}{t.modal.termsAnd}
                                         </span>
                                     </label>
                                 </div>
@@ -318,10 +320,10 @@ export default function DemoRequestModal({ isOpen, onClose }: DemoRequestModalPr
                                     {isSubmitting ? (
                                         <>
                                             <Loader2 style={{ width: '1.25rem', height: '1.25rem', animation: 'spin 1s linear infinite' }} />
-                                            Enviando...
+                                            {t.modal.submitting}
                                         </>
                                     ) : (
-                                        'Solicitar Demo Gratuita'
+                                        t.modal.submitButton
                                     )}
                                 </button>
                             </form>

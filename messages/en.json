@@ -7,6 +7,7 @@
         "cta": "Schedule Demo"
     },
     "hero": {
+        "badge": "EVERYTHING YOUR OPERATION NEEDS",
         "title": "The Operating System for Valet Parking Companies.",
         "subtitle": "Digitize your operation, eliminate cash fraud, and reduce delivery times by 40%. Total control from your phone.",
         "cta": "Get Started"
@@ -23,6 +24,16 @@
     },
     "socialProof": {
         "title": "Trusted by"
+    },
+    "stats": {
+        "stat1Title": "40%+",
+        "stat1Subtitle": "Faster vehicle deliveries",
+        "stat2Title": "95%",
+        "stat2Subtitle": "Cash fraud reduction",
+        "stat3Title": "100%",
+        "stat3Subtitle": "Digital operation",
+        "stat4Title": "24/7",
+        "stat4Subtitle": "Real-time control"
     },
     "howItWorks": {
         "title": "How It Works?",
@@ -65,5 +76,139 @@
         "successMessage": "Our team will contact you soon",
         "errorConnection": "Connection error. Please try again.",
         "errorGeneric": "Error sending request"
+    },
+    "terms": {
+        "backToHome": "Back to Home",
+        "index": "Index",
+        "title": "Terms and Conditions",
+        "lastUpdated": "Last updated: December 12, 2025",
+        "sections": {
+            "acceptance": {
+                "id": "acceptance",
+                "title": "Acceptance of Terms",
+                "titleNumbered": "1. Acceptance of Terms",
+                "p1": "By accessing and using the ParKpool platform (\"the Service\"), you agree to comply with and be bound by these Terms and Conditions. If you do not agree with any part of these terms, you must not use our service.",
+                "p2": "ParKpool is a software as a service (SaaS) designed for valet parking companies seeking to digitize and optimize their operations. The use of the service is exclusively intended for registered companies and their authorized employees."
+            },
+            "services": {
+                "id": "services",
+                "title": "Description of Services",
+                "titleNumbered": "2. Description of Services",
+                "p1": "ParKpool provides the following main functionalities:",
+                "list": [
+                    "Operational management system for valet parking",
+                    "Digital vehicle registration with photographic evidence",
+                    "Digital tickets via SMS and WhatsApp",
+                    "Payment processing and automatic cash closing",
+                    "Analytics dashboard and real-time reports",
+                    "Valet assignment and tracking"
+                ],
+                "p2": "We reserve the right to modify, suspend, or discontinue any aspect of the Service at any time, with 30 days prior notice to active users."
+            },
+            "accounts": {
+                "id": "accounts",
+                "title": "Accounts and Responsibility",
+                "titleNumbered": "3. Accounts and Responsibility",
+                "managerTitle": "Manager Account:",
+                "managerIntro": "The user who creates the main account is responsible for:",
+                "managerList": [
+                    "Maintaining the confidentiality of access credentials",
+                    "All activities carried out under their account",
+                    "The management and supervision of associated Valet users",
+                    "Compliance with local laws applicable to valet parking service"
+                ],
+                "valetTitle": "Valet Account:",
+                "valetIntro": "Employees with valet access must:",
+                "valetList": [
+                    "Use the system only for authorized work purposes",
+                    "Accurately record the condition of each vehicle",
+                    "Immediately report any incident or irregularity"
+                ],
+                "p1": "You are responsible for immediately notifying us of any unauthorized use of your account or any other security breach."
+            },
+            "payments": {
+                "id": "payments",
+                "title": "Payments and Billing",
+                "titleNumbered": "4. Payments and Billing",
+                "subscriptionTitle": "Subscription Model:",
+                "subscriptionIntro": "ParKpool operates under a monthly subscription SaaS model. Available plans include:",
+                "subscriptionList": [
+                    "Starter Plan: Up to 5 valets and 1 location",
+                    "Pro Plan: Up to 15 valets and 3 locations",
+                    "Enterprise Plan: Unlimited valets and locations"
+                ],
+                "processingTitle": "Payment Processing:",
+                "processingText": "All end-customer payments are processed through Stripe. ParKpool charges a commission of 2.5% + $500 COP per processed transaction.",
+                "billingTitle": "Billing:",
+                "billingIntro": "Subscriptions are billed on the first day of each month. The customer agrees that:",
+                "billingList": [
+                    "Charges are non-refundable except as required by law",
+                    "Non-renewal must be notified 15 days in advance",
+                    "Payment delays may result in service suspension"
+                ]
+            },
+            "liability": {
+                "id": "liability",
+                "title": "Limitation of Liability",
+                "titleNumbered": "5. Limitation of Liability",
+                "warningLabel": "⚠️ Important for Valet Parking Services",
+                "warningText": "ParKpool is solely operational management software. We assume no responsibility for damages, losses, or thefts of vehicles under your custody.",
+                "userAcknowledges": "The User acknowledges that:",
+                "userList": [
+                    "ParKpool is a technological tool and not a valet service provider",
+                    "Legal responsibility for vehicles lies with the valet parking company using the system",
+                    "The photographic record on the platform is supporting evidence, not a guarantee or insurance policy",
+                    "The User must maintain adequate insurance policies for their valet parking operation"
+                ],
+                "p1": "In no event shall ParKpool be liable for indirect, incidental, special, consequential, or punitive damages, including loss of profits, data, or use, even if we have been advised of the possibility of such damages."
+            },
+            "privacy": {
+                "id": "privacy",
+                "title": "Privacy and Data",
+                "titleNumbered": "6. Privacy and Data Protection",
+                "p1": "ParKpool is committed to protecting personal data in accordance with:",
+                "complianceList": [
+                    "Law 1581 of 2012 on Habeas Data (Colombia)",
+                    "GDPR (for customers in the European Union)",
+                    "International best practices in information security"
+                ],
+                "dataCollectedTitle": "Data Collected:",
+                "dataCollectedIntro": "We collect and process:",
+                "dataCollectedList": [
+                    "Contact information of Managers and Valets",
+                    "Operational data (vehicle records, tickets, transactions)",
+                    "Vehicle photographs for condition recording",
+                    "Location data for valet tracking (with consent)"
+                ],
+                "p2": "For detailed information on how we process, store, and protect your data, please see our",
+                "privacyPolicyLink": "Privacy Policy"
+            },
+            "modifications": {
+                "id": "modifications",
+                "title": "Modifications",
+                "titleNumbered": "7. Modifications to Terms",
+                "p1": "We reserve the right to modify these Terms and Conditions at any time. Substantial changes will be notified through:",
+                "notificationList": [
+                    "Email to the Manager's registered account",
+                    "Prominent notification on the platform dashboard",
+                    "Update of the \"Last updated\" date on this page"
+                ],
+                "p2": "Continued use of the Service after the publication of changes constitutes your acceptance of such changes. If you do not agree with the modified terms, you must discontinue use of the Service."
+            },
+            "contact": {
+                "id": "contact",
+                "title": "Contact",
+                "titleNumbered": "8. Contact",
+                "p1": "If you have questions about these Terms and Conditions, you can contact us through:",
+                "emailLabel": "Email",
+                "email": "legal@parkpool.co",
+                "supportLabel": "Technical Support",
+                "supportEmail": "support@parkpool.co",
+                "addressLabel": "Address",
+                "addressLine1": "Calle 100 #18A-30, Office 501",
+                "addressLine2": "Bogotá, Colombia"
+            }
+        },
+        "footerCta": "Ready to modernize your valet parking operation?"
     }
 }

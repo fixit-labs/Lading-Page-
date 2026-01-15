@@ -4,20 +4,27 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
-
-const sections = [
-    { id: 'aceptacion', title: 'Aceptación de Términos' },
-    { id: 'servicios', title: 'Descripción de Servicios' },
-    { id: 'cuentas', title: 'Cuentas y Responsabilidad' },
-    { id: 'pagos', title: 'Pagos y Facturación' },
-    { id: 'responsabilidad', title: 'Limitación de Responsabilidad' },
-    { id: 'privacidad', title: 'Privacidad y Datos' },
-    { id: 'modificaciones', title: 'Modificaciones' },
-    { id: 'contacto', title: 'Contacto' },
-];
+import LanguageSwitcher from '@/components/LanguageSwitcher';
+import { useTranslations } from '@/hooks/useTranslations';
 
 export default function TermsPage() {
-    const [activeSection, setActiveSection] = useState('aceptacion');
+    const [activeSection, setActiveSection] = useState('');
+    const t = useTranslations();
+
+    const sections = [
+        { id: t.terms.sections.acceptance.id, title: t.terms.sections.acceptance.title },
+        { id: t.terms.sections.services.id, title: t.terms.sections.services.title },
+        { id: t.terms.sections.accounts.id, title: t.terms.sections.accounts.title },
+        { id: t.terms.sections.payments.id, title: t.terms.sections.payments.title },
+        { id: t.terms.sections.liability.id, title: t.terms.sections.liability.title },
+        { id: t.terms.sections.privacy.id, title: t.terms.sections.privacy.title },
+        { id: t.terms.sections.modifications.id, title: t.terms.sections.modifications.title },
+        { id: t.terms.sections.contact.id, title: t.terms.sections.contact.title },
+    ];
+
+    useEffect(() => {
+        setActiveSection(t.terms.sections.acceptance.id);
+    }, [t.terms.sections.acceptance.id]);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -39,7 +46,7 @@ export default function TermsPage() {
 
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+    }, [sections]);
 
     const scrollToSection = (id: string) => {
         const element = document.getElementById(id);
@@ -62,16 +69,24 @@ export default function TermsPage() {
             {/* Header */}
             <header className="fixed top-0 w-full bg-white/95 backdrop-blur-md border-b border-gray-100 z-40">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-                    <Link href="/" className="text-2xl font-black text-midnight-navy hover:text-azure-blue transition-colors">
-                        ParKpool
+                    <Link href="/" className="flex-shrink-0">
+                        <img
+                            src="/images/light-logo.svg"
+                            alt="ParKpool"
+                            className="h-8 sm:h-10 w-auto"
+                            style={{ filter: 'brightness(0) saturate(100%)' }}
+                        />
                     </Link>
-                    <Link
-                        href="/"
-                        className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-midnight-navy hover:text-azure-blue transition-colors"
-                    >
-                        <ArrowLeft className="w-4 h-4" />
-                        Volver al Inicio
-                    </Link>
+                    <div className="flex items-center gap-4">
+                        <LanguageSwitcher variant="dark" />
+                        <Link
+                            href="/"
+                            className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-midnight-navy hover:text-azure-blue transition-colors"
+                        >
+                            <ArrowLeft className="w-4 h-4" />
+                            {t.terms.backToHome}
+                        </Link>
+                    </div>
                 </div>
             </header>
 
@@ -82,7 +97,7 @@ export default function TermsPage() {
                     <aside className="lg:col-span-3 hidden lg:block">
                         <nav className="sticky top-24">
                             <h2 className="text-sm font-bold text-midnight-navy/60 uppercase tracking-wider mb-4">
-                                Índice
+                                {t.terms.index}
                             </h2>
                             <ul className="space-y-2">
                                 {sections.map((section) => (
@@ -112,262 +127,211 @@ export default function TermsPage() {
                             {/* Title */}
                             <div className="mb-12">
                                 <h1 className="text-4xl sm:text-5xl font-black text-midnight-navy mb-4">
-                                    Términos y Condiciones
+                                    {t.terms.title}
                                 </h1>
                                 <p className="text-lg text-midnight-navy/60 font-medium">
-                                    Última actualización: 12 de diciembre de 2025
+                                    {t.terms.lastUpdated}
                                 </p>
                             </div>
 
-                            {/* Section 1: Aceptación */}
-                            <section id="aceptacion" className="mb-16 scroll-mt-24">
+                            {/* Section 1: Acceptance */}
+                            <section id={t.terms.sections.acceptance.id} className="mb-16 scroll-mt-24">
                                 <h2 className="text-2xl sm:text-3xl font-black text-midnight-navy mb-6">
-                                    1. Aceptación de Términos
+                                    {t.terms.sections.acceptance.titleNumbered}
                                 </h2>
                                 <div className="prose prose-lg max-w-none text-midnight-navy/80 font-medium leading-relaxed space-y-4">
-                                    <p>
-                                        Al acceder y utilizar la plataforma ParKpool ("el Servicio"), usted acepta cumplir
-                                        y estar sujeto a estos Términos y Condiciones. Si no está de acuerdo con alguna
-                                        parte de estos términos, no debe utilizar nuestro servicio.
-                                    </p>
-                                    <p>
-                                        ParKpool es un software como servicio (SaaS) diseñado para empresas de valet parking
-                                        que buscan digitalizar y optimizar sus operaciones. El uso del servicio está destinado
-                                        exclusivamente a empresas registradas y sus empleados autorizados.
-                                    </p>
+                                    <p>{t.terms.sections.acceptance.p1}</p>
+                                    <p>{t.terms.sections.acceptance.p2}</p>
                                 </div>
                             </section>
 
-                            {/* Section 2: Servicios */}
-                            <section id="servicios" className="mb-16 scroll-mt-24">
+                            {/* Section 2: Services */}
+                            <section id={t.terms.sections.services.id} className="mb-16 scroll-mt-24">
                                 <h2 className="text-2xl sm:text-3xl font-black text-midnight-navy mb-6">
-                                    2. Descripción de Servicios
+                                    {t.terms.sections.services.titleNumbered}
                                 </h2>
                                 <div className="prose prose-lg max-w-none text-midnight-navy/80 font-medium leading-relaxed space-y-4">
-                                    <p>
-                                        ParKpool proporciona las siguientes funcionalidades principales:
-                                    </p>
+                                    <p>{t.terms.sections.services.p1}</p>
                                     <ul className="list-disc ml-6 space-y-2">
-                                        <li>Sistema de gestión operativa para valet parking</li>
-                                        <li>Registro digital de vehículos con evidencia fotográfica</li>
-                                        <li>Tickets digitales vía SMS y WhatsApp</li>
-                                        <li>Procesamiento de pagos y cierres de caja automáticos</li>
-                                        <li>Dashboard de analytics y reportes en tiempo real</li>
-                                        <li>Asignación y tracking de valets</li>
+                                        {t.terms.sections.services.list.map((item: string, index: number) => (
+                                            <li key={index}>{item}</li>
+                                        ))}
                                     </ul>
-                                    <p>
-                                        Nos reservamos el derecho de modificar, suspender o discontinuar cualquier aspecto
-                                        del Servicio en cualquier momento, con previo aviso de 30 días a los usuarios activos.
-                                    </p>
+                                    <p>{t.terms.sections.services.p2}</p>
                                 </div>
                             </section>
 
-                            {/* Section 3: Cuentas */}
-                            <section id="cuentas" className="mb-16 scroll-mt-24">
+                            {/* Section 3: Accounts */}
+                            <section id={t.terms.sections.accounts.id} className="mb-16 scroll-mt-24">
                                 <h2 className="text-2xl sm:text-3xl font-black text-midnight-navy mb-6">
-                                    3. Cuentas y Responsabilidad
+                                    {t.terms.sections.accounts.titleNumbered}
                                 </h2>
                                 <div className="prose prose-lg max-w-none text-midnight-navy/80 font-medium leading-relaxed space-y-4">
                                     <p>
-                                        <strong className="text-midnight-navy">Cuenta de Manager:</strong> El usuario que
-                                        crea la cuenta principal es responsable de:
+                                        <strong className="text-midnight-navy">{t.terms.sections.accounts.managerTitle}</strong>{' '}
+                                        {t.terms.sections.accounts.managerIntro}
                                     </p>
                                     <ul className="list-disc ml-6 space-y-2">
-                                        <li>Mantener la confidencialidad de las credenciales de acceso</li>
-                                        <li>Todas las actividades realizadas bajo su cuenta</li>
-                                        <li>La gestión y supervisión de los usuarios Valet asociados</li>
-                                        <li>El cumplimiento de las leyes locales aplicables al servicio de valet parking</li>
+                                        {t.terms.sections.accounts.managerList.map((item: string, index: number) => (
+                                            <li key={index}>{item}</li>
+                                        ))}
                                     </ul>
                                     <p>
-                                        <strong className="text-midnight-navy">Cuenta de Valet:</strong> Los empleados con
-                                        acceso de valet deben:
+                                        <strong className="text-midnight-navy">{t.terms.sections.accounts.valetTitle}</strong>{' '}
+                                        {t.terms.sections.accounts.valetIntro}
                                     </p>
                                     <ul className="list-disc ml-6 space-y-2">
-                                        <li>Usar el sistema únicamente para fines laborales autorizados</li>
-                                        <li>Registrar con precisión el estado de cada vehículo</li>
-                                        <li>Reportar inmediatamente cualquier incidente o irregularidad</li>
+                                        {t.terms.sections.accounts.valetList.map((item: string, index: number) => (
+                                            <li key={index}>{item}</li>
+                                        ))}
                                     </ul>
-                                    <p>
-                                        Usted es responsable de notificarnos inmediatamente sobre cualquier uso no autorizado
-                                        de su cuenta o cualquier otra violación de seguridad.
-                                    </p>
+                                    <p>{t.terms.sections.accounts.p1}</p>
                                 </div>
                             </section>
 
-                            {/* Section 4: Pagos */}
-                            <section id="pagos" className="mb-16 scroll-mt-24">
+                            {/* Section 4: Payments */}
+                            <section id={t.terms.sections.payments.id} className="mb-16 scroll-mt-24">
                                 <h2 className="text-2xl sm:text-3xl font-black text-midnight-navy mb-6">
-                                    4. Pagos y Facturación
+                                    {t.terms.sections.payments.titleNumbered}
                                 </h2>
                                 <div className="prose prose-lg max-w-none text-midnight-navy/80 font-medium leading-relaxed space-y-4">
                                     <p>
-                                        <strong className="text-midnight-navy">Modelo de Suscripción:</strong> ParKpool opera
-                                        bajo un modelo SaaS de suscripción mensual. Los planes disponibles incluyen:
+                                        <strong className="text-midnight-navy">{t.terms.sections.payments.subscriptionTitle}</strong>{' '}
+                                        {t.terms.sections.payments.subscriptionIntro}
                                     </p>
                                     <ul className="list-disc ml-6 space-y-2">
-                                        <li>Plan Starter: Hasta 5 valets y 1 ubicación</li>
-                                        <li>Plan Pro: Hasta 15 valets y 3 ubicaciones</li>
-                                        <li>Plan Enterprise: Valets y ubicaciones ilimitadas</li>
+                                        {t.terms.sections.payments.subscriptionList.map((item: string, index: number) => (
+                                            <li key={index}>{item}</li>
+                                        ))}
                                     </ul>
                                     <p>
-                                        <strong className="text-midnight-navy">Procesamiento de Pagos:</strong> Todos los
-                                        pagos de clientes finales son procesados a través de Stripe. ParKpool cobra una
-                                        comisión del 2.5% + $500 COP por transacción procesada.
+                                        <strong className="text-midnight-navy">{t.terms.sections.payments.processingTitle}</strong>{' '}
+                                        {t.terms.sections.payments.processingText}
                                     </p>
                                     <p>
-                                        <strong className="text-midnight-navy">Facturación:</strong> Las suscripciones se
-                                        facturan el primer día de cada mes. El cliente acepta que:
+                                        <strong className="text-midnight-navy">{t.terms.sections.payments.billingTitle}</strong>{' '}
+                                        {t.terms.sections.payments.billingIntro}
                                     </p>
                                     <ul className="list-disc ml-6 space-y-2">
-                                        <li>Los cargos son no reembolsables excepto según lo requerido por ley</li>
-                                        <li>La no renovación debe notificarse con 15 días de anticipación</li>
-                                        <li>Los retrasos en pagos pueden resultar en suspensión del servicio</li>
+                                        {t.terms.sections.payments.billingList.map((item: string, index: number) => (
+                                            <li key={index}>{item}</li>
+                                        ))}
                                     </ul>
                                 </div>
                             </section>
 
-                            {/* Section 5: Responsabilidad */}
-                            <section id="responsabilidad" className="mb-16 scroll-mt-24">
+                            {/* Section 5: Liability */}
+                            <section id={t.terms.sections.liability.id} className="mb-16 scroll-mt-24">
                                 <h2 className="text-2xl sm:text-3xl font-black text-midnight-navy mb-6">
-                                    5. Limitación de Responsabilidad
+                                    {t.terms.sections.liability.titleNumbered}
                                 </h2>
                                 <div className="bg-amber-50 border-l-4 border-amber-400 p-6 rounded-lg mb-6">
                                     <p className="text-amber-900 font-bold text-sm uppercase tracking-wider mb-2">
-                                        ⚠️ Importante para Servicios de Valet Parking
+                                        {t.terms.sections.liability.warningLabel}
                                     </p>
                                     <p className="text-amber-800 font-medium">
-                                        ParKpool es únicamente un software de gestión operativa. No asumimos responsabilidad
-                                        alguna sobre daños, pérdidas o robos de vehículos bajo su custodia.
+                                        {t.terms.sections.liability.warningText}
                                     </p>
                                 </div>
                                 <div className="prose prose-lg max-w-none text-midnight-navy/80 font-medium leading-relaxed space-y-4">
                                     <p>
-                                        <strong className="text-midnight-navy">El Usuario reconoce que:</strong>
+                                        <strong className="text-midnight-navy">{t.terms.sections.liability.userAcknowledges}</strong>
                                     </p>
                                     <ul className="list-disc ml-6 space-y-2">
-                                        <li>
-                                            ParKpool es una herramienta tecnológica y no un proveedor de servicios de valet
-                                        </li>
-                                        <li>
-                                            La responsabilidad legal sobre los vehículos recae en la empresa de valet parking
-                                            usuaria del sistema
-                                        </li>
-                                        <li>
-                                            El registro fotográfico en la plataforma es una evidencia de apoyo, no una garantía
-                                            o póliza de seguro
-                                        </li>
-                                        <li>
-                                            El Usuario debe mantener pólizas de seguro adecuadas para su operación de valet
-                                            parking
-                                        </li>
+                                        {t.terms.sections.liability.userList.map((item: string, index: number) => (
+                                            <li key={index}>{item}</li>
+                                        ))}
                                     </ul>
-                                    <p>
-                                        En ningún caso ParKpool será responsable por daños indirectos, incidentales,
-                                        especiales, consecuentes o punitivos, incluyendo pérdida de beneficios, datos o uso,
-                                        incluso si hemos sido advertidos de la posibilidad de tales daños.
-                                    </p>
+                                    <p>{t.terms.sections.liability.p1}</p>
                                 </div>
                             </section>
 
-                            {/* Section 6: Privacidad */}
-                            <section id="privacidad" className="mb-16 scroll-mt-24">
+                            {/* Section 6: Privacy */}
+                            <section id={t.terms.sections.privacy.id} className="mb-16 scroll-mt-24">
                                 <h2 className="text-2xl sm:text-3xl font-black text-midnight-navy mb-6">
-                                    6. Privacidad y Protección de Datos
+                                    {t.terms.sections.privacy.titleNumbered}
                                 </h2>
                                 <div className="prose prose-lg max-w-none text-midnight-navy/80 font-medium leading-relaxed space-y-4">
-                                    <p>
-                                        ParKpool está comprometido con la protección de datos personales de acuerdo con:
-                                    </p>
+                                    <p>{t.terms.sections.privacy.p1}</p>
                                     <ul className="list-disc ml-6 space-y-2">
-                                        <li>Ley 1581 de 2012 de Habeas Data (Colombia)</li>
-                                        <li>GDPR (para clientes en la Unión Europea)</li>
-                                        <li>Mejores prácticas internacionales de seguridad de la información</li>
+                                        {t.terms.sections.privacy.complianceList.map((item: string, index: number) => (
+                                            <li key={index}>{item}</li>
+                                        ))}
                                     </ul>
                                     <p>
-                                        <strong className="text-midnight-navy">Datos Recopilados:</strong> Recopilamos y
-                                        procesamos:
+                                        <strong className="text-midnight-navy">{t.terms.sections.privacy.dataCollectedTitle}</strong>{' '}
+                                        {t.terms.sections.privacy.dataCollectedIntro}
                                     </p>
                                     <ul className="list-disc ml-6 space-y-2">
-                                        <li>Información de contacto de Managers y Valets</li>
-                                        <li>Datos operativos (registros de vehículos, tickets, transacciones)</li>
-                                        <li>Fotografías de vehículos para registro de estado</li>
-                                        <li>Datos de ubicación para tracking de valets (con consentimiento)</li>
+                                        {t.terms.sections.privacy.dataCollectedList.map((item: string, index: number) => (
+                                            <li key={index}>{item}</li>
+                                        ))}
                                     </ul>
                                     <p>
-                                        Para información detallada sobre cómo procesamos, almacenamos y protegemos sus datos,
-                                        consulte nuestra{' '}
+                                        {t.terms.sections.privacy.p2}{' '}
                                         <Link href="/privacy" className="text-azure-blue hover:underline font-bold">
-                                            Política de Privacidad
+                                            {t.terms.sections.privacy.privacyPolicyLink}
                                         </Link>
                                         .
                                     </p>
                                 </div>
                             </section>
 
-                            {/* Section 7: Modificaciones */}
-                            <section id="modificaciones" className="mb-16 scroll-mt-24">
+                            {/* Section 7: Modifications */}
+                            <section id={t.terms.sections.modifications.id} className="mb-16 scroll-mt-24">
                                 <h2 className="text-2xl sm:text-3xl font-black text-midnight-navy mb-6">
-                                    7. Modificaciones a los Términos
+                                    {t.terms.sections.modifications.titleNumbered}
                                 </h2>
                                 <div className="prose prose-lg max-w-none text-midnight-navy/80 font-medium leading-relaxed space-y-4">
-                                    <p>
-                                        Nos reservamos el derecho de modificar estos Términos y Condiciones en cualquier
-                                        momento. Los cambios sustanciales serán notificados a través de:
-                                    </p>
+                                    <p>{t.terms.sections.modifications.p1}</p>
                                     <ul className="list-disc ml-6 space-y-2">
-                                        <li>Correo electrónico a la cuenta registrada del Manager</li>
-                                        <li>Notificación destacada en el dashboard de la plataforma</li>
-                                        <li>Actualización de la fecha "Última actualización" en esta página</li>
+                                        {t.terms.sections.modifications.notificationList.map((item: string, index: number) => (
+                                            <li key={index}>{item}</li>
+                                        ))}
                                     </ul>
-                                    <p>
-                                        El uso continuado del Servicio después de la publicación de cambios constituye su
-                                        aceptación de dichos cambios. Si no está de acuerdo con los términos modificados,
-                                        debe discontinuar el uso del Servicio.
-                                    </p>
+                                    <p>{t.terms.sections.modifications.p2}</p>
                                 </div>
                             </section>
 
-                            {/* Section 8: Contacto */}
-                            <section id="contacto" className="mb-16 scroll-mt-24">
+                            {/* Section 8: Contact */}
+                            <section id={t.terms.sections.contact.id} className="mb-16 scroll-mt-24">
                                 <h2 className="text-2xl sm:text-3xl font-black text-midnight-navy mb-6">
-                                    8. Contacto
+                                    {t.terms.sections.contact.titleNumbered}
                                 </h2>
                                 <div className="prose prose-lg max-w-none text-midnight-navy/80 font-medium leading-relaxed space-y-4">
-                                    <p>
-                                        Si tiene preguntas sobre estos Términos y Condiciones, puede contactarnos a través de:
-                                    </p>
+                                    <p>{t.terms.sections.contact.p1}</p>
                                     <div className="bg-soft-gray/50 rounded-2xl p-6 not-prose">
                                         <div className="space-y-3">
                                             <div>
                                                 <p className="text-sm font-bold text-midnight-navy/60 uppercase tracking-wider mb-1">
-                                                    Email
+                                                    {t.terms.sections.contact.emailLabel}
                                                 </p>
                                                 <a
-                                                    href="mailto:legal@parkpool.co"
+                                                    href={`mailto:${t.terms.sections.contact.email}`}
                                                     className="text-azure-blue hover:underline font-bold text-lg"
                                                 >
-                                                    legal@parkpool.co
+                                                    {t.terms.sections.contact.email}
                                                 </a>
                                             </div>
                                             <div>
                                                 <p className="text-sm font-bold text-midnight-navy/60 uppercase tracking-wider mb-1">
-                                                    Soporte Técnico
+                                                    {t.terms.sections.contact.supportLabel}
                                                 </p>
                                                 <a
-                                                    href="mailto:soporte@parkpool.co"
+                                                    href={`mailto:${t.terms.sections.contact.supportEmail}`}
                                                     className="text-azure-blue hover:underline font-bold text-lg"
                                                 >
-                                                    soporte@parkpool.co
+                                                    {t.terms.sections.contact.supportEmail}
                                                 </a>
                                             </div>
                                             <div>
                                                 <p className="text-sm font-bold text-midnight-navy/60 uppercase tracking-wider mb-1">
-                                                    Dirección
+                                                    {t.terms.sections.contact.addressLabel}
                                                 </p>
                                                 <p className="text-midnight-navy font-medium">
-                                                    Calle 100 #18A-30, Oficina 501
+                                                    {t.terms.sections.contact.addressLine1}
                                                     <br />
-                                                    Bogotá, Colombia
+                                                    {t.terms.sections.contact.addressLine2}
                                                 </p>
                                             </div>
                                         </div>
@@ -379,13 +343,13 @@ export default function TermsPage() {
                             <div className="mt-16 pt-8 border-t border-gray-200">
                                 <div className="text-center">
                                     <p className="text-midnight-navy/60 font-medium mb-4">
-                                        ¿Listo para modernizar tu operación de valet parking?
+                                        {t.terms.footerCta}
                                     </p>
                                     <Link
                                         href="/"
                                         className="inline-flex items-center gap-2 bg-azure-blue text-white px-8 py-4 rounded-2xl font-bold shadow-lg shadow-azure-blue/30 hover:shadow-azure-blue/50 hover:-translate-y-1 transition-all"
                                     >
-                                        Volver al Inicio
+                                        {t.terms.backToHome}
                                     </Link>
                                 </div>
                             </div>
