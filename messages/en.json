@@ -80,135 +80,91 @@
     "terms": {
         "backToHome": "Back to Home",
         "index": "Index",
-        "title": "Terms and Conditions",
-        "lastUpdated": "Last updated: December 12, 2025",
+        "title": "Terms and Conditions of Use",
+        "lastUpdated": "Last updated: January 2025",
         "sections": {
             "acceptance": {
                 "id": "acceptance",
-                "title": "Acceptance of Terms",
-                "titleNumbered": "1. Acceptance of Terms",
-                "p1": "By accessing and using the ParKpool platform (\"the Service\"), you agree to comply with and be bound by these Terms and Conditions. If you do not agree with any part of these terms, you must not use our service.",
-                "p2": "ParKpool is a software as a service (SaaS) designed for valet parking companies seeking to digitize and optimize their operations. The use of the service is exclusively intended for registered companies and their authorized employees."
+                "title": "Acceptance",
+                "titleNumbered": "1. Acceptance",
+                "content": "The use of ParKpool services implies full and unconditional acceptance of these Terms and Conditions by Valet Parking Companies and end users."
             },
-            "services": {
-                "id": "services",
-                "title": "Description of Services",
-                "titleNumbered": "2. Description of Services",
-                "p1": "ParKpool provides the following main functionalities:",
-                "list": [
-                    "Operational management system for valet parking",
-                    "Digital vehicle registration with photographic evidence",
-                    "Digital tickets via SMS and WhatsApp",
-                    "Payment processing and automatic cash closing",
-                    "Analytics dashboard and real-time reports",
-                    "Valet assignment and tracking"
-                ],
-                "p2": "We reserve the right to modify, suspend, or discontinue any aspect of the Service at any time, with 30 days prior notice to active users."
+            "scope": {
+                "id": "scope",
+                "title": "Scope of Service",
+                "titleNumbered": "2. Scope of Service",
+                "content": "MVP - B2B Operation: SaaS platform for reservation management, queues, personnel, and payments.\n\nFuture Phases - B2C Operation: Direct interface with end user, including autonomous requests, payment history, additional services, and Fixit ecosystem."
             },
-            "accounts": {
-                "id": "accounts",
-                "title": "Accounts and Responsibility",
-                "titleNumbered": "3. Accounts and Responsibility",
-                "managerTitle": "Manager Account:",
-                "managerIntro": "The user who creates the main account is responsible for:",
-                "managerList": [
-                    "Maintaining the confidentiality of access credentials",
-                    "All activities carried out under their account",
-                    "The management and supervision of associated Valet users",
-                    "Compliance with local laws applicable to valet parking service"
-                ],
-                "valetTitle": "Valet Account:",
-                "valetIntro": "Employees with valet access must:",
-                "valetList": [
-                    "Use the system only for authorized work purposes",
-                    "Accurately record the condition of each vehicle",
-                    "Immediately report any incident or irregularity"
-                ],
-                "p1": "You are responsible for immediately notifying us of any unauthorized use of your account or any other security breach."
+            "custody": {
+                "id": "custody",
+                "title": "Custody and Responsibility",
+                "titleNumbered": "3. Custody and Responsibility",
+                "content": "Responsibility begins only when the vehicle is formally received and the digital entry ticket is generated.\n\nIncidents occurring in the waiting line before check-in are not the responsibility of ParKpool or the Operator.\n\nThe user grants a tacit mandate when handing over the keys, authorizing the Valet to drive and safeguard the vehicle.\n\nCustody ends when the vehicle is delivered and marked as \"Checked Out\" in the system."
+            },
+            "evidence": {
+                "id": "evidence",
+                "title": "Photographic Evidence",
+                "titleNumbered": "4. Photographic Evidence",
+                "content": "The Valet must capture at least two photographs of the vehicle at check-in.\n\nThese images constitute legal evidence in case of claims for pre-existing damage or scratches.\n\nThe user accepts that this evidence takes precedence over subsequent claims without additional support."
             },
             "payments": {
                 "id": "payments",
-                "title": "Payments and Billing",
-                "titleNumbered": "4. Payments and Billing",
-                "subscriptionTitle": "Subscription Model:",
-                "subscriptionIntro": "ParKpool operates under a monthly subscription SaaS model. Available plans include:",
-                "subscriptionList": [
-                    "Starter Plan: Up to 5 valets and 1 location",
-                    "Pro Plan: Up to 15 valets and 3 locations",
-                    "Enterprise Plan: Unlimited valets and locations"
-                ],
-                "processingTitle": "Payment Processing:",
-                "processingText": "All end-customer payments are processed through Stripe. ParKpool charges a commission of 2.5% + $500 COP per processed transaction.",
-                "billingTitle": "Billing:",
-                "billingIntro": "Subscriptions are billed on the first day of each month. The customer agrees that:",
-                "billingList": [
-                    "Charges are non-refundable except as required by law",
-                    "Non-renewal must be notified 15 days in advance",
-                    "Payment delays may result in service suspension"
-                ]
+                "title": "Rates and Payments",
+                "titleNumbered": "5. Rates and Payments",
+                "content": "Rates are defined by the Valet Company and configured in the system.\n\nThe user accepts the rates before making the payment, which is made through a digital link (e.g., Stripe).\n\nAdditional payments for complementary services (washing, charging, assistance) will be previously informed and accepted.\n\nParKpool is not responsible for failures in external payment gateways."
             },
             "liability": {
                 "id": "liability",
                 "title": "Limitation of Liability",
-                "titleNumbered": "5. Limitation of Liability",
-                "warningLabel": "⚠️ Important for Valet Parking Services",
-                "warningText": "ParKpool is solely operational management software. We assume no responsibility for damages, losses, or thefts of vehicles under your custody.",
-                "userAcknowledges": "The User acknowledges that:",
-                "userList": [
-                    "ParKpool is a technological tool and not a valet service provider",
-                    "Legal responsibility for vehicles lies with the valet parking company using the system",
-                    "The photographic record on the platform is supporting evidence, not a guarantee or insurance policy",
-                    "The User must maintain adequate insurance policies for their valet parking operation"
-                ],
-                "p1": "In no event shall ParKpool be liable for indirect, incidental, special, consequential, or punitive damages, including loss of profits, data, or use, even if we have been advised of the possibility of such damages."
+                "titleNumbered": "6. Limitation of Liability",
+                "content": "ParKpool is not responsible for damages derived from force majeure, user negligence, or incidents outside the custody period.\n\nIn future services such as \"Designated Driver\" or \"Valet On-Demand\", extra-contractual civil liability will be covered by specific insurance policies.\n\nParKpool does not guarantee continuous service availability, being able to suspend it for maintenance or updates."
+            },
+            "userObligations": {
+                "id": "userObligations",
+                "title": "User Obligations",
+                "titleNumbered": "7. User Obligations",
+                "content": "Provide truthful and complete information about the vehicle.\n\nDo not deliver vehicles with serious mechanical failures that may put the operation at risk.\n\nComply with safety and coexistence rules in service areas."
+            },
+            "clientObligations": {
+                "id": "clientObligations",
+                "title": "Client Obligations (Valet Company)",
+                "titleNumbered": "8. Client Obligations (Valet Company)",
+                "content": "Train their personnel in the correct use of the platform.\n\nEnsure the veracity of the information registered in the system.\n\nComply with labor and safety regulations applicable to operational personnel."
             },
             "privacy": {
                 "id": "privacy",
-                "title": "Privacy and Data",
-                "titleNumbered": "6. Privacy and Data Protection",
-                "p1": "ParKpool is committed to protecting personal data in accordance with:",
-                "complianceList": [
-                    "Law 1581 of 2012 on Habeas Data (Colombia)",
-                    "GDPR (for customers in the European Union)",
-                    "International best practices in information security"
-                ],
-                "dataCollectedTitle": "Data Collected:",
-                "dataCollectedIntro": "We collect and process:",
-                "dataCollectedList": [
-                    "Contact information of Managers and Valets",
-                    "Operational data (vehicle records, tickets, transactions)",
-                    "Vehicle photographs for condition recording",
-                    "Location data for valet tracking (with consent)"
-                ],
-                "p2": "For detailed information on how we process, store, and protect your data, please see our",
-                "privacyPolicyLink": "Privacy Policy"
+                "title": "Personal Data Policy",
+                "titleNumbered": "9. Personal Data Policy",
+                "content": "ParKpool collects and retains data such as license plate, name, and phone number of the user.\n\nThe user expressly authorizes the use of their data for cross-commercial purposes with Fixit ecosystem partners (insurance, maintenance, roadside assistance).\n\nData may be retained as \"qualified leads\" even after the service has ended.\n\nProfile enrichment will be applied for marketing segmentation, always within the legal limits of the Florida Information Protection Act (FIPA) and other applicable privacy laws in the U.S.\n\nThe user may exercise their rights of access, rectification, and deletion of data in accordance with current Florida legislation."
+            },
+            "intellectualProperty": {
+                "id": "intellectualProperty",
+                "title": "Intellectual Property",
+                "titleNumbered": "10. Intellectual Property",
+                "content": "All software, trademarks, and content associated with ParKpool are the exclusive property of the company and may not be reproduced without authorization."
             },
             "modifications": {
                 "id": "modifications",
                 "title": "Modifications",
-                "titleNumbered": "7. Modifications to Terms",
-                "p1": "We reserve the right to modify these Terms and Conditions at any time. Substantial changes will be notified through:",
-                "notificationList": [
-                    "Email to the Manager's registered account",
-                    "Prominent notification on the platform dashboard",
-                    "Update of the \"Last updated\" date on this page"
-                ],
-                "p2": "Continued use of the Service after the publication of changes constitutes your acceptance of such changes. If you do not agree with the modified terms, you must discontinue use of the Service."
+                "titleNumbered": "11. Modifications",
+                "content": "ParKpool may update these Terms and Conditions at any time, notifying clients and users. Continued use of the service implies acceptance of the modifications."
+            },
+            "jurisdiction": {
+                "id": "jurisdiction",
+                "title": "Jurisdiction and Applicable Law",
+                "titleNumbered": "12. Jurisdiction and Applicable Law",
+                "content": "These Terms and Conditions are governed by the laws of the State of Florida, United States of America.\n\nAny dispute shall be resolved before the competent state or federal courts located in Miami-Dade County, Florida.\n\nThe user and the Client expressly waive any other jurisdiction that may correspond to them."
             },
             "contact": {
                 "id": "contact",
                 "title": "Contact",
-                "titleNumbered": "8. Contact",
-                "p1": "If you have questions about these Terms and Conditions, you can contact us through:",
+                "titleNumbered": "13. Contact",
                 "emailLabel": "Email",
-                "email": "legal@parkpool.co",
-                "supportLabel": "Technical Support",
-                "supportEmail": "support@parkpool.co",
-                "addressLabel": "Address",
-                "addressLine1": "Calle 100 #18A-30, Office 501",
-                "addressLine2": "Bogotá, Colombia"
+                "email": "legal@parkpool.com",
+                "phoneLabel": "Phone",
+                "phone": "+1 (contact number in the U.S.)"
             }
         },
-        "footerCta": "Ready to modernize your valet parking operation?"
+        "footerCta": "By using our services, you agree to these terms and conditions in full."
     }
 }

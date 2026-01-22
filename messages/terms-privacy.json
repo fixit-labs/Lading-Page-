@@ -1,0 +1,110 @@
+{
+    "terms": {
+        "title": "Terms and Conditions",
+        "mainTitle": "Terms and Conditions of Use",
+        "lastUpdated": "Last updated: January 2025",
+        "footerNote": "By using our services, you agree to these terms and conditions in full.",
+        "sections": {
+            "acceptance": {
+                "title": "1. Acceptance",
+                "content": "The use of ParKpool services implies full and unconditional acceptance of these Terms and Conditions by Valet Parking Companies and end users."
+            },
+            "scope": {
+                "title": "2. Scope of Service",
+                "content": "MVP - B2B Operation: SaaS platform for reservation management, queues, personnel, and payments.\n\nFuture Phases - B2C Operation: Direct interface with end user, including autonomous requests, payment history, additional services, and Fixit ecosystem."
+            },
+            "custody": {
+                "title": "3. Custody and Responsibility",
+                "content": "Responsibility begins only when the vehicle is formally received and the digital entry ticket is generated.\n\nIncidents occurring in the waiting line before check-in are not the responsibility of ParKpool or the Operator.\n\nThe user grants a tacit mandate when handing over the keys, authorizing the Valet to drive and safeguard the vehicle.\n\nCustody ends when the vehicle is delivered and marked as \"Checked Out\" in the system."
+            },
+            "evidence": {
+                "title": "4. Photographic Evidence",
+                "content": "The Valet must capture at least two photographs of the vehicle at check-in.\n\nThese images constitute legal evidence in case of claims for pre-existing damage or scratches.\n\nThe user accepts that this evidence takes precedence over subsequent claims without additional support."
+            },
+            "payments": {
+                "title": "5. Rates and Payments",
+                "content": "Rates are defined by the Valet Company and configured in the system.\n\nThe user accepts the rates before making the payment, which is made through a digital link (e.g., Stripe).\n\nAdditional payments for complementary services (washing, charging, assistance) will be previously informed and accepted.\n\nParKpool is not responsible for failures in external payment gateways."
+            },
+            "liability": {
+                "title": "6. Limitation of Liability",
+                "content": "ParKpool is not responsible for damages derived from force majeure, user negligence, or incidents outside the custody period.\n\nIn future services such as \"Designated Driver\" or \"Valet On-Demand\", extra-contractual civil liability will be covered by specific insurance policies.\n\nParKpool does not guarantee continuous service availability, being able to suspend it for maintenance or updates."
+            },
+            "userObligations": {
+                "title": "7. User Obligations",
+                "content": "Provide truthful and complete information about the vehicle.\n\nDo not deliver vehicles with serious mechanical failures that may put the operation at risk.\n\nComply with safety and coexistence rules in service areas."
+            },
+            "clientObligations": {
+                "title": "8. Client Obligations (Valet Company)",
+                "content": "Train their personnel in the correct use of the platform.\n\nEnsure the veracity of the information registered in the system.\n\nComply with labor and safety regulations applicable to operational personnel."
+            },
+            "privacy": {
+                "title": "9. Personal Data Policy",
+                "content": "ParKpool collects and retains data such as license plate, name, and phone number of the user.\n\nThe user expressly authorizes the use of their data for cross-commercial purposes with Fixit ecosystem partners (insurance, maintenance, roadside assistance).\n\nData may be retained as \"qualified leads\" even after the service has ended.\n\nProfile enrichment will be applied for marketing segmentation, always within the legal limits of the Florida Information Protection Act (FIPA) and other applicable privacy laws in the U.S.\n\nThe user may exercise their rights of access, rectification, and deletion of data in accordance with current Florida legislation."
+            },
+            "intellectualProperty": {
+                "title": "10. Intellectual Property",
+                "content": "All software, trademarks, and content associated with ParKpool are the exclusive property of the company and may not be reproduced without authorization."
+            },
+            "modifications": {
+                "title": "11. Modifications",
+                "content": "ParKpool may update these Terms and Conditions at any time, notifying clients and users. Continued use of the service implies acceptance of the modifications."
+            },
+            "jurisdiction": {
+                "title": "12. Jurisdiction and Applicable Law",
+                "content": "These Terms and Conditions are governed by the laws of the State of Florida, United States of America.\n\nAny dispute shall be resolved before the competent state or federal courts located in Miami-Dade County, Florida.\n\nThe user and the Client expressly waive any other jurisdiction that may correspond to them."
+            },
+            "contact": {
+                "title": "13. Contact",
+                "content": "For inquiries or complaints, please contact:\n\nEmail: legal@parkpool.com\nPhone: [+1 contact number in the U.S.]"
+            }
+        }
+    },
+    "privacy": {
+        "title": "Privacy Policy",
+        "mainTitle": "Privacy Policy",
+        "lastUpdated": "Last updated: January 2025",
+        "footerNote": "Your privacy is important to us. Please review this policy to understand how we collect and use your information.",
+        "sections": {
+            "introduction": {
+                "title": "1. Introduction",
+                "content": "This Privacy Policy describes how ParKpool (\"we\", \"us\", or \"our\") collects, uses, and protects your personal information when you use our valet parking services."
+            },
+            "dataCollection": {
+                "title": "2. Data Collection",
+                "content": "We collect the following information:\n\n• Personal identification: Name, phone number, email address\n• Vehicle information: License plate, make, model, color, year\n• Service usage: Check-in/check-out times, parking duration, payment information\n• Photos: Vehicle condition at check-in and check-out\n• Location data: When using our mobile services"
+            },
+            "dataUse": {
+                "title": "3. How We Use Your Data",
+                "content": "Your information is used to:\n\n• Provide valet parking services\n• Process payments and manage reservations\n• Communicate about your service\n• Improve our platform and services\n• Comply with legal requirements\n• Marketing purposes (with your consent)"
+            },
+            "dataSharing": {
+                "title": "4. Data Sharing",
+                "content": "We may share your data with:\n\n• Valet parking operators providing the service\n• Payment processors (Stripe)\n• Fixit ecosystem partners for cross-marketing (with consent)\n• Legal authorities when required by law\n\nWe do not sell your personal information to third parties."
+            },
+            "dataRetention": {
+                "title": "5. Data Retention",
+                "content": "We retain your data:\n\n• For active accounts: Until account deletion\n• For transaction records: 7 years for tax purposes\n• For marketing leads: Until you opt out\n• Photos and inspections: 2 years for liability purposes"
+            },
+            "yourRights": {
+                "title": "6. Your Rights",
+                "content": "Under Florida law, you have the right to:\n\n• Access your personal data\n• Correct inaccurate information\n• Delete your data (subject to legal requirements)\n• Opt out of marketing communications\n• Data portability\n\nTo exercise these rights, contact legal@parkpool.com"
+            },
+            "security": {
+                "title": "7. Data Security",
+                "content": "We implement appropriate security measures including:\n\n• Encryption of sensitive data\n• Secure payment processing\n• Regular security audits\n• Limited access to personal information\n• Secure data storage and transmission"
+            },
+            "cookies": {
+                "title": "8. Cookies and Tracking",
+                "content": "We use cookies and similar technologies to:\n\n• Remember your preferences\n• Analyze website usage\n• Provide personalized experiences\n• Ensure platform security\n\nYou can manage cookie preferences in your browser settings."
+            },
+            "changes": {
+                "title": "9. Policy Changes",
+                "content": "We may update this Privacy Policy periodically. We will notify you of significant changes through email or platform notifications. Continued use of our services constitutes acceptance of the updated policy."
+            },
+            "contact": {
+                "title": "10. Contact Information",
+                "content": "For privacy-related questions or concerns, contact:\n\nEmail: legal@parkpool.com\nPhone: [+1 contact number in the U.S.]\nAddress: [Company address in Florida]"
+            }
+        }
+    }
+}
