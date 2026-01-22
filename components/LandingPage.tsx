@@ -119,7 +119,7 @@ const LandingPage = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
-                    className="text-left z-10"
+                    className="text-left z-10 pt-10"
                 >
                     <h1 className="text-3xl font-black text-white leading-tight mb-4">
                         {t.hero.title}
