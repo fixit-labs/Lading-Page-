@@ -93,7 +93,7 @@ const LandingPage = () => {
                             <LanguageSwitcher />
                             <button
                                 onClick={() => setIsModalOpen(true)}
-                                className="bg-azure-blue text-white px-6 py-3 rounded-2xl font-medium hover:bg-blue-600 transition-all shadow-lg hover:shadow-xl hover:shadow-azure-blue/30"
+                                className="bg-blue-600 text-white px-6 py-2 rounded-xl font-medium hover:bg-blue-600 transition-all shadow-lg hover:shadow-xl hover:shadow-azure-blue/30"
                             >
                                 {t.navbar.cta}
                             </button>
@@ -104,7 +104,7 @@ const LandingPage = () => {
                             <LanguageSwitcher />
                             <button
                                 onClick={() => setIsModalOpen(true)}
-                                className="bg-azure-blue text-white px-4 py-2 rounded-2xl font-medium text-sm shadow-lg"
+                                className="bg-azure-blue text-white px-3 py-1.5 rounded-xl font-medium text-xs shadow-lg"
                             >
                                 {t.navbar.cta}
                             </button>
@@ -113,8 +113,84 @@ const LandingPage = () => {
                 </div>
             </nav>
 
-            {/* Hero Section */}
-            <section className="min-h-screen flex items-center px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-black to-[#082340] pt-24 sm:pt-28 pb-12 relative overflow-hidden">
+            {/* Hero Section - Mobile Only */}
+            <section className="sm:hidden min-h-screen flex flex-col justify-start px-4 bg-gradient-to-b from-black to-[#082340] pt-28 pb-8 relative overflow-hidden">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                    className="text-left z-10"
+                >
+                    <h1 className="text-3xl font-black text-white leading-tight mb-4">
+                        {t.hero.title}
+                    </h1>
+                    <p className="text-base text-white/80 font-medium mb-6 leading-relaxed">
+                        {t.hero.subtitle}
+                    </p>
+                    <motion.button
+                        onClick={() => setIsModalOpen(true)}
+                        whileTap={{ scale: 0.98 }}
+                        className="bg-blue-600 text-white px-8 py-3 rounded-xl font-bold text-base shadow-xl shadow-azure-blue/40 transition-all"
+                    >
+                        {t.hero.cta}
+                    </motion.button>
+                </motion.div>
+
+                {/* Dashboard Mockup - Mobile */}
+                <motion.div
+                    animate={{
+                        y: [0, -6, 0],
+                    }}
+                    transition={{
+                        duration: 3,
+                        repeat: Infinity,
+                        ease: "easeInOut"
+                    }}
+                    className="absolute bottom-24 left-10 bg-white rounded-xl shadow-xl p-3 w-80 h-44 border border-gray-200 z-5 pointer-events-none"
+                >
+                    <div className="space-y-2">
+                        <div className="flex items-center justify-between">
+                            <div className="h-4 w-16 bg-gray-500 rounded"></div>
+                            <div className="h-4 w-4 bg-azure-blue rounded-full"></div>
+                        </div>
+                        <div className="grid grid-cols-3 gap-1">
+                            <div className="bg-gray-200 rounded-lg p-1.5 space-y-1">
+                                <div className="h-3 w-3 bg-azure-blue rounded"></div>
+                                <div className="h-3 w-6 bg-gray-400 rounded"></div>
+                            </div>
+                            <div className="bg-gray-200 rounded-lg p-1.5 space-y-1">
+                                <div className="h-3 w-3 bg-azure-blue rounded"></div>
+                                <div className="h-3 w-6 bg-gray-400 rounded"></div>
+                            </div>
+                            <div className="bg-gray-200 rounded-lg p-1.5 space-y-1">
+                                <div className="h-3 w-3 bg-azure-blue rounded"></div>
+                                <div className="h-3 w-6 bg-gray-400 rounded"></div>
+                            </div>
+                        </div>
+                        <div className="bg-gradient-to-r from-azure-blue to-blue-500 rounded-lg p-2 text-white">
+                            <div className="h-4 w-10 bg-white/30 rounded mb-1"></div>
+                            <div className="h-6 w-14 bg-white rounded"></div>
+                        </div>
+                    </div>
+                </motion.div>
+
+                {/* White Car Image - Mobile */}
+                <img
+                    src="/images/white-hero-car.webp"
+                    alt="White car"
+                    className="absolute bottom-0 left-5 w-60 z-20 pointer-events-none"
+                />
+
+                {/* Chatting Man Image - Mobile */}
+                <img
+                    src="/images/hero-chating-man.webp"
+                    alt="Man using phone"
+                    className="absolute bottom-0 left-20 h-[45%] w-auto z-30 pointer-events-none object-contain object-bottom"
+                />
+            </section>
+
+            {/* Hero Section - Desktop/Tablet */}
+            <section className="hidden sm:flex min-h-screen items-center px-6 lg:px-8 bg-gradient-to-b from-black to-[#082340] pt-28 pb-12 relative overflow-hidden">
                 <div className="max-w-7xl mx-auto w-full py-8">
                     <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                         {/* Left Content */}
@@ -124,21 +200,21 @@ const LandingPage = () => {
                             transition={{ duration: 0.8 }}
                         >
                             <div className="inline-block bg-white rounded-lg px-4 py-1.5 mb-4">
-                                <span className="text-azure-blue text-xs sm:text-sm font-bold mx-4 uppercase tracking-wide">
+                                <span className="text-azure-blue text-sm font-bold mx-4 uppercase tracking-wide">
                                     {t.hero.badge}
                                 </span>
                             </div>
-                            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight mb-6">
+                            <h1 className="text-5xl lg:text-6xl font-black text-white leading-tight mb-6">
                                 {t.hero.title}
                             </h1>
-                            <p className="text-lg sm:text-xl text-white/80 font-medium mb-8 leading-relaxed">
+                            <p className="text-xl text-white/80 font-medium mb-8 leading-relaxed">
                                 {t.hero.subtitle}
                             </p>
                             <motion.button
                                 onClick={() => setIsModalOpen(true)}
                                 whileHover={{ scale: 1.02, y: -2 }}
                                 whileTap={{ scale: 0.98 }}
-                                className="bg-azure-blue text-white px-8 py-4 rounded-2xl font-bold text-lg shadow-2xl shadow-azure-blue/40 hover:shadow-azure-blue/60 transition-all"
+                                className="bg-blue-600 text-white px-12 py-4 rounded-xl font-bold text-lg shadow-2xl shadow-azure-blue/40 hover:shadow-azure-blue/60 transition-all"
                             >
                                 {t.hero.cta}
                             </motion.button>
@@ -160,7 +236,7 @@ const LandingPage = () => {
                                     repeat: Infinity,
                                     ease: "easeInOut"
                                 }}
-                                className="relative bg-white rounded-2xl shadow-2xl p-6 sm:p-8 border border-gray-200"
+                                className="relative bg-white rounded-2xl shadow-2xl p-8 border border-gray-200"
                             >
                                 {/* Dashboard Mockup */}
                                 <div className="space-y-4">
@@ -201,7 +277,7 @@ const LandingPage = () => {
                                 <img
                                     src="/images/white-hero-car.webp"
                                     alt="White car"
-                                    className="absolute -bottom-[12rem] -left-20 w-72 sm:w-80 lg:w-[32rem] z-20 pointer-events-none"
+                                    className="absolute -bottom-[12rem] -left-20 w-80 lg:w-[32rem] z-20 pointer-events-none"
                                 />
 
                                 {/* Floating Valet App Card */}
@@ -216,7 +292,7 @@ const LandingPage = () => {
                                         ease: "easeInOut",
                                         delay: 0.5
                                     }}
-                                    className="absolute -right-4 -bottom-4 bg-gradient-to-br from-azure-blue to-blue-600 rounded-2xl shadow-2xl p-4 w-40 sm:w-48 border border-white/20"
+                                    className="absolute -right-4 -bottom-4 bg-gradient-to-br from-azure-blue to-blue-600 rounded-2xl shadow-2xl p-4 w-48 border border-white/20"
                                 >
                                     <div className="text-white space-y-3">
                                         <div className="flex items-center gap-2">
@@ -238,11 +314,11 @@ const LandingPage = () => {
                     </div>
                 </div>
 
-                {/* Chatting Man Image - Anchored to bottom of Hero Section */}
+                {/* Chatting Man Image - Desktop/Tablet */}
                 <img
                     src="/images/hero-chating-man.webp"
                     alt="Man using phone"
-                    className="absolute bottom-0 right-[5%] lg:right-[10%] xl:right-[6%] h-[50%] sm:h-[60%] lg:h-[80%] w-auto z-30 pointer-events-none object-contain object-bottom"
+                    className="absolute bottom-0 right-[5%] lg:right-[10%] xl:right-[6%] h-[60%] lg:h-[80%] w-auto z-30 pointer-events-none object-contain object-bottom"
                 />
             </section>
 
@@ -264,7 +340,7 @@ const LandingPage = () => {
                             <motion.div
                                 whileHover={{ y: -8, scale: 1.02 }}
                                 transition={{ type: "spring", stiffness: 300 }}
-                                className="relative rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all h-full min-h-[480px] border border-soft-gray/50 flex flex-col justify-end overflow-hidden"
+                                className="relative rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all h-full min-h-[340px] sm:min-h-[480px] border border-soft-gray/50 flex flex-col justify-end overflow-hidden"
                                 style={{
                                     backgroundImage: 'url(/images/card1-solutions-bg.webp)',
                                     backgroundSize: 'cover',
@@ -280,11 +356,11 @@ const LandingPage = () => {
                                 </div>
 
                                 {/* Contenido */}
-                                <div className="pr-24 relative z-10">
-                                    <h3 className="text-2xl font-black text-white mb-4">
+                                <div className="pr-0 sm:pr-24 relative z-10">
+                                    <h3 className="text-xl sm:text-2xl font-black text-white mb-3 sm:mb-4">
                                         {t.solutions.card1Title}
                                     </h3>
-                                    <p className="text-white/90 font-medium leading-relaxed">
+                                    <p className="text-sm sm:text-base text-white/90 font-medium leading-relaxed">
                                         {t.solutions.card1Description}
                                     </p>
                                 </div>
@@ -303,11 +379,11 @@ const LandingPage = () => {
                                     <div className="absolute top-8 right-8 bg-azure-blue w-16 h-16 rounded-2xl flex items-center justify-center shadow-lg">
                                         <Shield className="w-8 h-8 text-white" />
                                     </div>
-                                    <div className="pr-24">
-                                        <h3 className="text-2xl font-black text-midnight-navy mb-4">
+                                    <div className="pr-0 sm:pr-24 mt-16 sm:mt-0">
+                                        <h3 className="text-xl sm:text-2xl font-black text-midnight-navy mb-3 sm:mb-4">
                                             {t.solutions.card2Title}
                                         </h3>
-                                        <p className="text-midnight-navy/70 font-medium leading-relaxed">
+                                        <p className="text-sm sm:text-base text-midnight-navy/70 font-medium leading-relaxed">
                                             {t.solutions.card2Description}
                                         </p>
                                     </div>
@@ -324,11 +400,11 @@ const LandingPage = () => {
                                     <div className="absolute top-8 right-8 bg-azure-blue w-16 h-16 rounded-2xl flex items-center justify-center shadow-lg">
                                         <FileText className="w-8 h-8 text-white" />
                                     </div>
-                                    <div className="pr-24">
-                                        <h3 className="text-2xl font-black text-white mb-4">
+                                    <div className="pr-0 sm:pr-24 mt-16 sm:mt-0">
+                                        <h3 className="text-xl sm:text-2xl font-black text-white mb-3 sm:mb-4">
                                             {t.solutions.card3Title}
                                         </h3>
-                                        <p className="text-white/90 font-medium leading-relaxed">
+                                        <p className="text-sm sm:text-base text-white/90 font-medium leading-relaxed">
                                             {t.solutions.card3Description}
                                         </p>
                                     </div>
@@ -339,8 +415,31 @@ const LandingPage = () => {
                 </div>
             </section>
 
-            {/* Social Proof */}
-            <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+            {/* Social Proof - Mobile */}
+            <section className="sm:hidden py-12 bg-black">
+                <div className="px-4">
+                    <AnimatedSection>
+                        <h2 className="text-center text-white font-bold mb-8 text-xl uppercase tracking-wide">
+                            {t.socialProof.title}
+                        </h2>
+                        <div className="flex items-center justify-center gap-6">
+                            {/* Icono del volante - izquierda */}
+                            <div className="bg-white rounded-full w-16 h-16 flex items-center justify-center p-3">
+                                <img src="/images/wheel-icon.svg" alt="Wheel icon" className="w-full h-full" style={{ filter: 'invert(30%) sepia(99%) saturate(4000%) hue-rotate(205deg) brightness(99%) contrast(99%)' }} />
+                            </div>
+                            {/* Lista vertical de parqueaderos */}
+                            <div className="flex flex-col gap-3 text-white font-bold text-sm">
+                                <span>• JV Parking Logistic</span>
+                                <span>• Hacienda Martina</span>
+                                <span>• Elite Valet Services</span>
+                            </div>
+                        </div>
+                    </AnimatedSection>
+                </div>
+            </section>
+
+            {/* Social Proof - Desktop */}
+            <section className="hidden sm:block py-16 px-6 lg:px-8 bg-white">
                 <div className="max-w-7xl mx-auto">
                     <AnimatedSection>
                         <h2 className="text-center text-midnight-navy font-bold mb-12 text-2xl sm:text-3xl uppercase tracking-wide">
@@ -354,18 +453,86 @@ const LandingPage = () => {
 
                             {/* Nombres de parqueaderos - distribuidos */}
                             <div className="flex-1 flex items-center justify-around text-white font-bold text-sm sm:text-base ml-4">
-                                
-                                <span><span className="hidden sm:inline mr-2">•</span>JV Parking Logistic</span>
-                                <span><span className="hidden sm:inline mr-2">•</span>Hacienda Martina</span>
-                                <span><span className="hidden sm:inline mr-2">•</span>Elite Valet Services</span>
+                                <span><span className="mr-2">•</span>JV Parking Logistic</span>
+                                <span><span className="mr-2">•</span>Hacienda Martina</span>
+                                <span><span className="mr-2">•</span>Elite Valet Services</span>
                             </div>
                         </div>
                     </AnimatedSection>
                 </div>
             </section>
 
-            {/* Statistics Section */}
-            <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+            {/* Statistics Section - Mobile */}
+            <section className="sm:hidden py-12 px-4 bg-white">
+                <AnimatedSection>
+                    <div className="flex flex-col gap-4">
+                        {/* Row 1: Card 1 (60%) + Card 2 (40%) */}
+                        <div className="flex gap-3">
+                            <motion.div
+                                whileTap={{ scale: 0.98 }}
+                                className="w-[60%] bg-[#1d59f7] rounded-2xl p-5 shadow-lg relative"
+                            >
+                                <div className="absolute top-4 right-4 bg-white rounded-full w-8 h-8 flex items-center justify-center">
+                                    <ArrowUpRight className="w-4 h-4 text-[#1d59f7]" />
+                                </div>
+                                <div className="text-left">
+                                    <h3 className="text-3xl font-black text-white mb-2">
+                                        {t.stats.stat1Title}
+                                    </h3>
+                                    <p className="text-xs text-white/90">
+                                        {t.stats.stat1Subtitle}
+                                    </p>
+                                </div>
+                            </motion.div>
+                            <motion.div
+                                whileTap={{ scale: 0.98 }}
+                                className="w-[40%] bg-[#092746] rounded-2xl p-5 shadow-lg"
+                            >
+                                <div className="text-center">
+                                    <h3 className="text-2xl font-black text-white mb-2">
+                                        {t.stats.stat2Title}
+                                    </h3>
+                                    <p className="text-xs text-white/90">
+                                        {t.stats.stat2Subtitle}
+                                    </p>
+                                </div>
+                            </motion.div>
+                        </div>
+                        {/* Row 2: Card 3 (50%) + Card 4 (50%) */}
+                        <div className="flex gap-3">
+                            <motion.div
+                                whileTap={{ scale: 0.98 }}
+                                className="w-1/2 bg-[#092746] rounded-2xl p-5 shadow-lg"
+                            >
+                                <div className="text-center">
+                                    <h3 className="text-2xl font-black text-white mb-2">
+                                        {t.stats.stat3Title}
+                                    </h3>
+                                    <p className="text-xs text-white/90">
+                                        {t.stats.stat3Subtitle}
+                                    </p>
+                                </div>
+                            </motion.div>
+                            <motion.div
+                                whileTap={{ scale: 0.98 }}
+                                className="w-1/2 bg-[#092746] rounded-2xl p-5 shadow-lg"
+                            >
+                                <div className="text-center">
+                                    <h3 className="text-2xl font-black text-white mb-2">
+                                        {t.stats.stat4Title}
+                                    </h3>
+                                    <p className="text-xs text-white/90">
+                                        {t.stats.stat4Subtitle}
+                                    </p>
+                                </div>
+                            </motion.div>
+                        </div>
+                    </div>
+                </AnimatedSection>
+            </section>
+
+            {/* Statistics Section - Desktop */}
+            <section className="hidden sm:block py-16 px-6 lg:px-8 bg-white">
                 <div className="max-w-7xl mx-auto">
                     <AnimatedSection>
                         <div className="bg-[#e6e6e6] rounded-3xl p-12 sm:p-16 shadow-lg relative overflow-visible">
@@ -452,7 +619,7 @@ const LandingPage = () => {
             </section>
 
             {/* How it Works */}
-            <section id="seguridad" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+            <section id="seguridad" className="py-10 px-4 sm:px-6 lg:px-8 bg-white">
                 <div className="max-w-7xl mx-auto">
                     <AnimatedSection className="text-center mb-16">
                         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-midnight-navy mb-4">

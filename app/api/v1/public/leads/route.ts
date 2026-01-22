@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
+import nodemailer from 'nodemailer';
 
 // Validation schema
 const leadSchema = z.object({
@@ -9,15 +10,51 @@ const leadSchema = z.object({
     phone: z.string().optional(),
 });
 
+// Configure email transporter
+const transporter = nodemailer.createTransport({
+    host: process.env.SMTP_HOST,
+    port: parseInt(process.env.SMTP_PORT || '587'),
+    secure: process.env.SMTP_SECURE === 'true',
+    auth: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASSWORD,
+    },
+});
+
 export async function POST(request: NextRequest) {
     try {
         // Parse and validate request body
         const body = await request.json();
         const validatedData = leadSchema.parse(body);
 
-        // TODO: Integrate with database when ready
-        // For now, just log the lead and return success
-        console.log('New lead received:', validatedData);
+        // Send email to requests@parkpool.tech
+        await transporter.sendMail({
+            from: process.env.SMTP_FROM || 'noreply@parkpool.tech',
+            to: 'requests@parkpool.tech',
+            subject: `Nueva solicitud de demo - ${validatedData.companyName}`,
+            html: `
+                <h2>Nueva solicitud de demo</h2>
+                <p><strong>Nombre:</strong> ${validatedData.name}</p>
+                <p><strong>Empresa:</strong> ${validatedData.companyName}</p>
+                <p><strong>Email:</strong> ${validatedData.email}</p>
+                <p><strong>Teléfono:</strong> ${validatedData.phone || 'No proporcionado'}</p>
+                <hr>
+                <p><em>Enviado desde el formulario de la landing page de ParkPool</em></p>
+            `,
+            text: `
+            Nueva solicitud de demo
+
+            Nombre: ${validatedData.name}
+            Empresa: ${validatedData.companyName}
+            Email: ${validatedData.email}
+            Teléfono: ${validatedData.phone || 'No proporcionado'}
+
+            ---
+            Enviado desde el formulario de la landing page de ParkPool
+            `,
+        });
+
+        console.log('Lead email sent successfully:', validatedData);
 
         // Return success
         return NextResponse.json(
