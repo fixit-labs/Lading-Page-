@@ -54,6 +54,7 @@
         "terms": "Términos y Condiciones",
         "privacy": "Política de Privacidad",
         "contact": "Contacto",
+        "support": "Soporte",
         "copyright": "© 2025 ParKpool. Todos los derechos reservados."
     },
     "modal": {
@@ -74,6 +75,32 @@
         "submitting": "Enviando...",
         "successTitle": "¡Solicitud Recibida!",
         "successMessage": "Nuestro equipo te contactará pronto",
+        "errorConnection": "Error de conexión. Por favor intenta de nuevo.",
+        "errorGeneric": "Error al enviar la solicitud"
+    },
+    "support": {
+        "title": "Soporte",
+        "subtitle": "¿Necesitas ayuda? Estamos aquí para ti",
+        "backToHome": "Volver al Inicio",
+        "typeLabel": "Tipo de solicitud",
+        "typePlaceholder": "Selecciona una opción",
+        "typeOptions": {
+            "webIssue": "Problema con la aplicación web",
+            "mobileIssue": "Problema con la aplicación móvil",
+            "suggestion": "Sugerencia para la aplicación",
+            "paymentIssue": "Problema con un pago",
+            "other": "Otro tipo de soporte"
+        },
+        "emailLabel": "Correo electrónico",
+        "emailPlaceholder": "tu@correo.com",
+        "nameLabel": "Nombre completo",
+        "namePlaceholder": "Juan Pérez",
+        "descriptionLabel": "Describe tu problema o sugerencia",
+        "descriptionPlaceholder": "Cuéntanos en detalle qué sucedió o qué sugieres...",
+        "submitButton": "Enviar Solicitud",
+        "submitting": "Enviando...",
+        "successTitle": "¡Solicitud Enviada!",
+        "successMessage": "Nuestro equipo de soporte te contactará pronto",
         "errorConnection": "Error de conexión. Por favor intenta de nuevo.",
         "errorGeneric": "Error al enviar la solicitud"
     },
