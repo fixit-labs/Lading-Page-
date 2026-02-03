@@ -54,6 +54,7 @@
         "terms": "Terms and Conditions",
         "privacy": "Privacy Policy",
         "contact": "Contact",
+        "support": "Support",
         "copyright": "© 2025 ParKpool. All rights reserved."
     },
     "modal": {
@@ -74,6 +75,32 @@
         "submitting": "Sending...",
         "successTitle": "Request Received!",
         "successMessage": "Our team will contact you soon",
+        "errorConnection": "Connection error. Please try again.",
+        "errorGeneric": "Error sending request"
+    },
+    "support": {
+        "title": "Support",
+        "subtitle": "Need help? We're here for you",
+        "backToHome": "Back to Home",
+        "typeLabel": "Request type",
+        "typePlaceholder": "Select an option",
+        "typeOptions": {
+            "webIssue": "Web application issue",
+            "mobileIssue": "Mobile application issue",
+            "suggestion": "App suggestion",
+            "paymentIssue": "Payment issue",
+            "other": "Other support"
+        },
+        "emailLabel": "Email address",
+        "emailPlaceholder": "you@email.com",
+        "nameLabel": "Full name",
+        "namePlaceholder": "John Doe",
+        "descriptionLabel": "Describe your issue or suggestion",
+        "descriptionPlaceholder": "Tell us in detail what happened or what you suggest...",
+        "submitButton": "Submit Request",
+        "submitting": "Sending...",
+        "successTitle": "Request Sent!",
+        "successMessage": "Our support team will contact you soon",
         "errorConnection": "Connection error. Please try again.",
         "errorGeneric": "Error sending request"
     },
