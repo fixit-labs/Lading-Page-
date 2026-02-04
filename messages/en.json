@@ -255,10 +255,18 @@
                 ],
                 "agreement": "By using ParkPool valet services and providing your phone number, you agree to these SMS terms."
             },
+            "privacy": {
+                "id": "privacy-data",
+                "title": "Privacy & Data Sharing",
+                "titleNumbered": "7. Privacy & Data Sharing",
+                "content": "We respect your privacy. Your mobile phone number and SMS consent information will NOT be shared with third parties or affiliates for marketing or promotional purposes.",
+                "usage": "Your information is only used to provide ParkPool valet parking services and send you the transactional messages described in this policy.",
+                "linkText": "For complete details, see our"
+            },
             "contact": {
                 "id": "contact",
                 "title": "Contact",
-                "titleNumbered": "7. Contact",
+                "titleNumbered": "8. Contact",
                 "company": "ParkPool - A Fixit Group LLC Service",
                 "email": "support@parkpool.tech",
                 "websiteLabel": "Website"
