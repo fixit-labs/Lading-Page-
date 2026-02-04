@@ -3,8 +3,8 @@ import './globals.css';
 import { Providers } from '@/components/Providers';
 
 export const metadata: Metadata = {
-    title: 'ParKpool - El Sistema Operativo para Empresas de Valet Parking',
-    description: 'Digitaliza tu operación, elimina el fraude de efectivo y reduce tiempos de entrega en un 40%.',
+    title: 'ParKpool - The Operating System for Valet Parking Companies',
+    description: 'Digitize your operation, eliminate cash fraud, and reduce delivery times by 40%.',
 };
 
 export default function RootLayout({
@@ -13,7 +13,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     return (
-        <html lang="es">
+        <html lang="en">
             <head>
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

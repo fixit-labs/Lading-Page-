@@ -53,6 +53,7 @@
     "footer": {
         "terms": "Términos y Condiciones",
         "privacy": "Política de Privacidad",
+        "smsPolicy": "Política SMS",
         "contact": "Contacto",
         "support": "Soporte",
         "copyright": "© 2025 ParKpool. Todos los derechos reservados."
@@ -193,5 +194,79 @@
             }
         },
         "footerCta": "Al usar nuestros servicios, usted acepta estos términos y condiciones en su totalidad."
+    },
+    "smsPolicy": {
+        "backToHome": "Volver al Inicio",
+        "index": "Contenido",
+        "badge": "Notificaciones SMS",
+        "title": "Política de Notificaciones SMS",
+        "lastUpdated": "Última actualización: Febrero 2025",
+        "sections": {
+            "consent": {
+                "id": "consentimiento",
+                "title": "Consentimiento Verbal",
+                "titleNumbered": "1. Proceso de Recopilación de Consentimiento Verbal",
+                "intro": "Cuando los clientes utilizan nuestro servicio de valet parking, nuestro personal recopila su número de teléfono usando el siguiente guión de consentimiento verbal:",
+                "scriptLabel": "Guión del Personal",
+                "script": "¿Me puede dar su número de teléfono? Le enviaremos un mensaje de texto con su ticket de estacionamiento y le notificaremos cuando su vehículo esté listo para ser recogido. Puede responder STOP en cualquier momento para dejar de recibir mensajes.",
+                "conclusion": "Al proporcionar su número de teléfono a nuestro personal de valet, los clientes dan su consentimiento para recibir notificaciones SMS relacionadas con su servicio de estacionamiento."
+            },
+            "messageTypes": {
+                "id": "tipos-mensajes",
+                "title": "Tipos de Mensajes",
+                "titleNumbered": "2. Tipos de Mensajes",
+                "intro": "Los clientes recibirán mensajes SMS transaccionales que incluyen:",
+                "items": [
+                    "Confirmación de check-in con código de ticket/reservación",
+                    "Notificación de vehículo listo para recoger",
+                    "Enlaces de pago y solicitud de devolución",
+                    "Actualizaciones del estado del servicio"
+                ]
+            },
+            "frequency": {
+                "id": "frecuencia",
+                "title": "Frecuencia de Mensajes",
+                "titleNumbered": "3. Frecuencia de Mensajes",
+                "typical": "Típicamente 2-4 mensajes por sesión de estacionamiento",
+                "note": "La frecuencia de mensajes varía según el uso del servicio."
+            },
+            "optOut": {
+                "id": "cancelacion",
+                "title": "Cancelación",
+                "titleNumbered": "4. Cancelación (Opt-Out)",
+                "instruction": "Para dejar de recibir mensajes, responda STOP a cualquier mensaje.",
+                "confirmation": "Recibirá una confirmación y no se enviarán más mensajes."
+            },
+            "help": {
+                "id": "ayuda",
+                "title": "Ayuda",
+                "titleNumbered": "5. Ayuda",
+                "instruction": "Para obtener asistencia, responda HELP a cualquier mensaje o contáctenos:",
+                "email": "support@parkpool.tech"
+            },
+            "additionalInfo": {
+                "id": "informacion-adicional",
+                "title": "Información Adicional",
+                "titleNumbered": "6. Información Adicional",
+                "items": [
+                    "Pueden aplicar tarifas de mensajes y datos",
+                    "Los operadores no son responsables por mensajes retrasados o no entregados",
+                    "Servicio disponible en Estados Unidos"
+                ],
+                "agreement": "Al usar los servicios de valet de ParkPool y proporcionar su número de teléfono, acepta estos términos de SMS."
+            },
+            "contact": {
+                "id": "contacto",
+                "title": "Contacto",
+                "titleNumbered": "7. Contacto",
+                "company": "ParkPool - Un Servicio de Fixit Group LLC",
+                "email": "support@parkpool.tech",
+                "websiteLabel": "Sitio web"
+            }
+        },
+        "relatedLinks": "Enlaces Relacionados",
+        "privacyLink": "Política de Privacidad",
+        "termsLink": "Términos y Condiciones",
+        "footerCta": "Al usar nuestros servicios de valet y proporcionar su número de teléfono, acepta estos términos de SMS."
     }
 }

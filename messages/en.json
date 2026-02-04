@@ -53,6 +53,7 @@
     "footer": {
         "terms": "Terms and Conditions",
         "privacy": "Privacy Policy",
+        "smsPolicy": "SMS Policy",
         "contact": "Contact",
         "support": "Support",
         "copyright": "© 2025 ParKpool. All rights reserved."
@@ -193,5 +194,79 @@
             }
         },
         "footerCta": "By using our services, you agree to these terms and conditions in full."
+    },
+    "smsPolicy": {
+        "backToHome": "Back to Home",
+        "index": "Contents",
+        "badge": "SMS Notifications",
+        "title": "SMS Notification Policy",
+        "lastUpdated": "Last updated: February 2025",
+        "sections": {
+            "consent": {
+                "id": "consent",
+                "title": "Verbal Consent",
+                "titleNumbered": "1. Verbal Consent Collection Process",
+                "intro": "When customers use our valet parking service, our staff collects their phone number using the following verbal consent script:",
+                "scriptLabel": "Staff Script",
+                "script": "May I have your phone number? We will send you a text message with your parking ticket and notify you when your vehicle is ready for pickup. You can reply STOP at any time to opt out of messages.",
+                "conclusion": "By providing their phone number to our valet staff, customers consent to receive SMS notifications related to their parking service."
+            },
+            "messageTypes": {
+                "id": "message-types",
+                "title": "Types of Messages",
+                "titleNumbered": "2. Types of Messages",
+                "intro": "Customers will receive transactional SMS messages including:",
+                "items": [
+                    "Check-in confirmation with ticket/reservation code",
+                    "Vehicle ready for pickup notification",
+                    "Payment and return request links",
+                    "Service status updates"
+                ]
+            },
+            "frequency": {
+                "id": "frequency",
+                "title": "Message Frequency",
+                "titleNumbered": "3. Message Frequency",
+                "typical": "Typically 2-4 messages per parking session",
+                "note": "Message frequency varies based on service usage."
+            },
+            "optOut": {
+                "id": "opt-out",
+                "title": "Opt-Out",
+                "titleNumbered": "4. Opt-Out",
+                "instruction": "To stop receiving messages, reply STOP to any message.",
+                "confirmation": "You will receive a confirmation and no further messages will be sent."
+            },
+            "help": {
+                "id": "help",
+                "title": "Help",
+                "titleNumbered": "5. Help",
+                "instruction": "For assistance, reply HELP to any message or contact:",
+                "email": "support@parkpool.tech"
+            },
+            "additionalInfo": {
+                "id": "additional-info",
+                "title": "Additional Information",
+                "titleNumbered": "6. Additional Information",
+                "items": [
+                    "Message and data rates may apply",
+                    "Carriers are not liable for delayed or undelivered messages",
+                    "Service available in the United States"
+                ],
+                "agreement": "By using ParkPool valet services and providing your phone number, you agree to these SMS terms."
+            },
+            "contact": {
+                "id": "contact",
+                "title": "Contact",
+                "titleNumbered": "7. Contact",
+                "company": "ParkPool - A Fixit Group LLC Service",
+                "email": "support@parkpool.tech",
+                "websiteLabel": "Website"
+            }
+        },
+        "relatedLinks": "Related Links",
+        "privacyLink": "Privacy Policy",
+        "termsLink": "Terms & Conditions",
+        "footerCta": "By using our valet services and providing your phone number, you agree to these SMS terms."
     }
 }
