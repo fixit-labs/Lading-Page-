@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowLeft, MessageSquare, Phone, Mail, Shield, HelpCircle, Bell, XCircle } from 'lucide-react';
+import { ArrowLeft, MessageSquare, Phone, Mail, Shield, HelpCircle, Bell, XCircle, Lock } from 'lucide-react';
 import Link from 'next/link';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import { useTranslations } from '@/hooks/useTranslations';
@@ -18,6 +18,7 @@ export default function SmsPolicy() {
         { id: t.smsPolicy.sections.optOut.id, title: t.smsPolicy.sections.optOut.title, icon: XCircle },
         { id: t.smsPolicy.sections.help.id, title: t.smsPolicy.sections.help.title, icon: HelpCircle },
         { id: t.smsPolicy.sections.additionalInfo.id, title: t.smsPolicy.sections.additionalInfo.title, icon: Shield },
+        { id: t.smsPolicy.sections.privacy.id, title: t.smsPolicy.sections.privacy.title, icon: Lock },
         { id: t.smsPolicy.sections.contact.id, title: t.smsPolicy.sections.contact.title, icon: Mail },
     ];
 
@@ -252,7 +253,34 @@ export default function SmsPolicy() {
                                 </div>
                             </section>
 
-                            {/* Section 7: Contact */}
+                            {/* Section 7: Privacy & Data Sharing */}
+                            <section id={t.smsPolicy.sections.privacy.id} className="mb-16 scroll-mt-24">
+                                <h2 className="text-2xl sm:text-3xl font-black text-midnight-navy mb-6 flex items-center gap-3">
+                                    <Lock className="w-8 h-8 text-azure-blue" />
+                                    {t.smsPolicy.sections.privacy.titleNumbered}
+                                </h2>
+                                <div className="prose prose-lg max-w-none text-midnight-navy/80 font-medium leading-relaxed space-y-4">
+                                    <div className="bg-green-50 border border-green-100 rounded-2xl p-6">
+                                        <p className="font-bold text-midnight-navy mb-3">
+                                            {t.smsPolicy.sections.privacy.content}
+                                        </p>
+                                        <p className="text-midnight-navy/70 mb-4">
+                                            {t.smsPolicy.sections.privacy.usage}
+                                        </p>
+                                        <p className="text-midnight-navy/70">
+                                            {t.smsPolicy.sections.privacy.linkText}{' '}
+                                            <Link
+                                                href={`/terms#${t.terms.sections.privacy.id}`}
+                                                className="text-azure-blue hover:underline font-bold"
+                                            >
+                                                {t.smsPolicy.privacyLink}
+                                            </Link>
+                                        </p>
+                                    </div>
+                                </div>
+                            </section>
+
+                            {/* Section 8: Contact */}
                             <section id={t.smsPolicy.sections.contact.id} className="mb-16 scroll-mt-24">
                                 <h2 className="text-2xl sm:text-3xl font-black text-midnight-navy mb-6 flex items-center gap-3">
                                     <Mail className="w-8 h-8 text-azure-blue" />
