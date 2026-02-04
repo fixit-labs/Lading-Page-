@@ -71,119 +71,65 @@ export default function SupportPage() {
     };
 
     return (
-        <div style={{ minHeight: '100vh', backgroundColor: '#f8fafc' }}>
+        <div className="min-h-screen bg-white font-sans">
             {/* Header */}
-            <header style={{
-                backgroundColor: 'white',
-                borderBottom: '1px solid #e5e7eb',
-                padding: '1rem 1.5rem',
-            }}>
-                <div style={{
-                    maxWidth: '1200px',
-                    margin: '0 auto',
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                }}>
-                    <Link
-                        href="/"
-                        style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            gap: '0.5rem',
-                            color: '#0A62F8',
-                            textDecoration: 'none',
-                            fontWeight: '500',
-                        }}
-                    >
-                        <ArrowLeft style={{ width: '1.25rem', height: '1.25rem' }} />
-                        {t.support.backToHome}
+            <header className="fixed top-0 w-full bg-white/95 backdrop-blur-md border-b border-gray-100 z-40">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+                    <Link href="/" className="flex-shrink-0">
+                        <img
+                            src="/images/light-logo.svg"
+                            alt="ParKpool"
+                            className="h-8 sm:h-10 w-auto"
+                            style={{ filter: 'brightness(0) saturate(100%)' }}
+                        />
                     </Link>
-                    <LanguageSwitcher />
+                    <div className="flex items-center gap-4">
+                        <LanguageSwitcher variant="dark" />
+                        <Link
+                            href="/"
+                            className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-midnight-navy hover:text-azure-blue transition-colors"
+                        >
+                            <ArrowLeft className="w-4 h-4" />
+                            {t.support.backToHome}
+                        </Link>
+                    </div>
                 </div>
             </header>
 
             {/* Main Content */}
-            <main style={{
-                maxWidth: '600px',
-                margin: '0 auto',
-                padding: '2rem 1.5rem',
-            }}>
+            <main className="max-w-xl mx-auto px-4 sm:px-6 pt-24 pb-16">
                 {/* Title Section */}
-                <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-                    <div style={{
-                        width: '4rem',
-                        height: '4rem',
-                        backgroundColor: '#dbeafe',
-                        borderRadius: '9999px',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        margin: '0 auto 1rem',
-                    }}>
-                        <HelpCircle style={{ width: '2rem', height: '2rem', color: '#0A62F8' }} />
+                <div className="text-center mb-8">
+                    <div className="w-16 h-16 bg-azure-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <HelpCircle className="w-8 h-8 text-azure-blue" />
                     </div>
-                    <h1 style={{
-                        fontSize: '2rem',
-                        fontWeight: '900',
-                        color: '#0B2848',
-                        marginBottom: '0.5rem',
-                    }}>
+                    <h1 className="text-3xl sm:text-4xl font-black text-midnight-navy mb-2">
                         {t.support.title}
                     </h1>
-                    <p style={{ color: '#6b7280', fontSize: '1.125rem' }}>
+                    <p className="text-midnight-navy/60 text-lg font-medium">
                         {t.support.subtitle}
                     </p>
                 </div>
 
                 {/* Form Card */}
-                <div style={{
-                    backgroundColor: 'white',
-                    borderRadius: '1rem',
-                    boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
-                    padding: '2rem',
-                }}>
+                <div className="bg-soft-gray/30 rounded-2xl shadow-lg p-6 sm:p-8 border border-gray-100">
                     {/* Success State */}
                     {submitStatus === 'success' && (
-                        <div style={{ textAlign: 'center', padding: '2rem 0' }}>
-                            <div style={{
-                                width: '4rem',
-                                height: '4rem',
-                                backgroundColor: '#dcfce7',
-                                borderRadius: '9999px',
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                margin: '0 auto 1rem',
-                            }}>
-                                <CheckCircle style={{ width: '2rem', height: '2rem', color: '#16a34a' }} />
+                        <div className="text-center py-8">
+                            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <CheckCircle className="w-8 h-8 text-green-600" />
                             </div>
-                            <h2 style={{
-                                fontSize: '1.5rem',
-                                fontWeight: 'bold',
-                                color: '#0B2848',
-                                marginBottom: '0.5rem',
-                            }}>
+                            <h2 className="text-2xl font-black text-midnight-navy mb-2">
                                 {t.support.successTitle}
                             </h2>
-                            <p style={{ color: '#6b7280', marginBottom: '1.5rem' }}>
+                            <p className="text-midnight-navy/60 mb-6">
                                 {t.support.successMessage}
                             </p>
                             <Link
                                 href="/"
-                                style={{
-                                    display: 'inline-flex',
-                                    alignItems: 'center',
-                                    gap: '0.5rem',
-                                    padding: '0.75rem 1.5rem',
-                                    backgroundColor: '#0A62F8',
-                                    color: 'white',
-                                    borderRadius: '0.75rem',
-                                    textDecoration: 'none',
-                                    fontWeight: '500',
-                                }}
+                                className="inline-flex items-center gap-2 px-6 py-3 bg-azure-blue text-white rounded-xl font-bold hover:shadow-lg hover:shadow-azure-blue/30 transition-all"
                             >
-                                <ArrowLeft style={{ width: '1rem', height: '1rem' }} />
+                                <ArrowLeft className="w-4 h-4" />
                                 {t.support.backToHome}
                             </Link>
                         </div>
@@ -191,14 +137,8 @@ export default function SupportPage() {
 
                     {/* Error State */}
                     {submitStatus === 'error' && (
-                        <div style={{
-                            backgroundColor: '#fef2f2',
-                            border: '1px solid #fecaca',
-                            borderRadius: '0.75rem',
-                            padding: '1rem',
-                            marginBottom: '1.5rem',
-                        }}>
-                            <p style={{ color: '#991b1b', fontSize: '0.875rem', textAlign: 'center', fontWeight: '500' }}>
+                        <div className="bg-red-50 border border-red-200 rounded-xl p-4 mb-6">
+                            <p className="text-red-700 text-sm text-center font-medium">
                                 {errorMessage}
                             </p>
                         </div>
@@ -206,18 +146,12 @@ export default function SupportPage() {
 
                     {/* Form */}
                     {submitStatus !== 'success' && (
-                        <form onSubmit={handleSubmit}>
+                        <form onSubmit={handleSubmit} className="space-y-5">
                             {/* Name Field */}
-                            <div style={{ marginBottom: '1.25rem' }}>
+                            <div>
                                 <label
                                     htmlFor="name"
-                                    style={{
-                                        display: 'block',
-                                        fontSize: '0.875rem',
-                                        fontWeight: 'bold',
-                                        color: '#0B2848',
-                                        marginBottom: '0.5rem',
-                                    }}
+                                    className="block text-sm font-bold text-midnight-navy mb-2"
                                 >
                                     {t.support.nameLabel} *
                                 </label>
@@ -229,29 +163,15 @@ export default function SupportPage() {
                                     value={formData.name}
                                     onChange={handleChange}
                                     placeholder={t.support.namePlaceholder}
-                                    style={{
-                                        width: '100%',
-                                        padding: '0.75rem 1rem',
-                                        border: '1px solid #e5e7eb',
-                                        borderRadius: '0.75rem',
-                                        fontSize: '1rem',
-                                        outline: 'none',
-                                        boxSizing: 'border-box',
-                                    }}
+                                    className="w-full px-4 py-3 border border-gray-200 rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-azure-blue/50 focus:border-azure-blue transition-all"
                                 />
                             </div>
 
                             {/* Email Field */}
-                            <div style={{ marginBottom: '1.25rem' }}>
+                            <div>
                                 <label
                                     htmlFor="email"
-                                    style={{
-                                        display: 'block',
-                                        fontSize: '0.875rem',
-                                        fontWeight: 'bold',
-                                        color: '#0B2848',
-                                        marginBottom: '0.5rem',
-                                    }}
+                                    className="block text-sm font-bold text-midnight-navy mb-2"
                                 >
                                     {t.support.emailLabel} *
                                 </label>
@@ -263,29 +183,15 @@ export default function SupportPage() {
                                     value={formData.email}
                                     onChange={handleChange}
                                     placeholder={t.support.emailPlaceholder}
-                                    style={{
-                                        width: '100%',
-                                        padding: '0.75rem 1rem',
-                                        border: '1px solid #e5e7eb',
-                                        borderRadius: '0.75rem',
-                                        fontSize: '1rem',
-                                        outline: 'none',
-                                        boxSizing: 'border-box',
-                                    }}
+                                    className="w-full px-4 py-3 border border-gray-200 rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-azure-blue/50 focus:border-azure-blue transition-all"
                                 />
                             </div>
 
                             {/* Request Type Field */}
-                            <div style={{ marginBottom: '1.25rem' }}>
+                            <div>
                                 <label
                                     htmlFor="requestType"
-                                    style={{
-                                        display: 'block',
-                                        fontSize: '0.875rem',
-                                        fontWeight: 'bold',
-                                        color: '#0B2848',
-                                        marginBottom: '0.5rem',
-                                    }}
+                                    className="block text-sm font-bold text-midnight-navy mb-2"
                                 >
                                     {t.support.typeLabel} *
                                 </label>
@@ -295,17 +201,7 @@ export default function SupportPage() {
                                     required
                                     value={formData.requestType}
                                     onChange={handleChange}
-                                    style={{
-                                        width: '100%',
-                                        padding: '0.75rem 1rem',
-                                        border: '1px solid #e5e7eb',
-                                        borderRadius: '0.75rem',
-                                        fontSize: '1rem',
-                                        outline: 'none',
-                                        backgroundColor: 'white',
-                                        cursor: 'pointer',
-                                        boxSizing: 'border-box',
-                                    }}
+                                    className="w-full px-4 py-3 border border-gray-200 rounded-xl text-base bg-white cursor-pointer focus:outline-none focus:ring-2 focus:ring-azure-blue/50 focus:border-azure-blue transition-all"
                                 >
                                     <option value="" disabled>
                                         {t.support.typePlaceholder}
@@ -319,16 +215,10 @@ export default function SupportPage() {
                             </div>
 
                             {/* Description Field */}
-                            <div style={{ marginBottom: '1.5rem' }}>
+                            <div>
                                 <label
                                     htmlFor="description"
-                                    style={{
-                                        display: 'block',
-                                        fontSize: '0.875rem',
-                                        fontWeight: 'bold',
-                                        color: '#0B2848',
-                                        marginBottom: '0.5rem',
-                                    }}
+                                    className="block text-sm font-bold text-midnight-navy mb-2"
                                 >
                                     {t.support.descriptionLabel} *
                                 </label>
@@ -340,17 +230,7 @@ export default function SupportPage() {
                                     value={formData.description}
                                     onChange={handleChange}
                                     placeholder={t.support.descriptionPlaceholder}
-                                    style={{
-                                        width: '100%',
-                                        padding: '0.75rem 1rem',
-                                        border: '1px solid #e5e7eb',
-                                        borderRadius: '0.75rem',
-                                        fontSize: '1rem',
-                                        outline: 'none',
-                                        resize: 'vertical',
-                                        minHeight: '120px',
-                                        boxSizing: 'border-box',
-                                    }}
+                                    className="w-full px-4 py-3 border border-gray-200 rounded-xl text-base resize-y min-h-[120px] focus:outline-none focus:ring-2 focus:ring-azure-blue/50 focus:border-azure-blue transition-all"
                                 />
                             </div>
 
@@ -358,26 +238,13 @@ export default function SupportPage() {
                             <button
                                 type="submit"
                                 disabled={isSubmitting}
-                                style={{
-                                    width: '100%',
-                                    padding: '1rem',
-                                    backgroundColor: '#0A62F8',
-                                    color: 'white',
-                                    fontWeight: 'bold',
-                                    borderRadius: '0.75rem',
-                                    border: 'none',
-                                    cursor: isSubmitting ? 'not-allowed' : 'pointer',
-                                    opacity: isSubmitting ? 0.5 : 1,
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    gap: '0.5rem',
-                                    fontSize: '1rem',
-                                }}
+                                className={`w-full py-4 bg-azure-blue text-white font-bold rounded-xl flex items-center justify-center gap-2 text-base shadow-lg shadow-azure-blue/30 hover:shadow-azure-blue/50 hover:-translate-y-0.5 transition-all ${
+                                    isSubmitting ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'
+                                }`}
                             >
                                 {isSubmitting ? (
                                     <>
-                                        <Loader2 style={{ width: '1.25rem', height: '1.25rem', animation: 'spin 1s linear infinite' }} />
+                                        <Loader2 className="w-5 h-5 animate-spin" />
                                         {t.support.submitting}
                                     </>
                                 ) : (
