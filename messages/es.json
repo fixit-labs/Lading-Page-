@@ -82,6 +82,7 @@
     "support": {
         "title": "Soporte",
         "subtitle": "¿Necesitas ayuda? Estamos aquí para ti",
+        "directEmail": "O escríbenos directamente a",
         "backToHome": "Volver al Inicio",
         "typeLabel": "Tipo de solicitud",
         "typePlaceholder": "Selecciona una opción",
