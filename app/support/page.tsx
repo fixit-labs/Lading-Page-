@@ -109,6 +109,15 @@ export default function SupportPage() {
                     <p className="text-midnight-navy/60 text-lg font-medium">
                         {t.support.subtitle}
                     </p>
+                    <p className="text-midnight-navy/60 text-sm mt-3">
+                        {t.support.directEmail}{' '}
+                        <a
+                            href="mailto:support@parkpool.tech"
+                            className="text-azure-blue font-semibold hover:underline"
+                        >
+                            support@parkpool.tech
+                        </a>
+                    </p>
                 </div>
 
                 {/* Form Card */}

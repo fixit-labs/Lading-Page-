@@ -82,6 +82,7 @@
     "support": {
         "title": "Support",
         "subtitle": "Need help? We're here for you",
+        "directEmail": "Or email us directly at",
         "backToHome": "Back to Home",
         "typeLabel": "Request type",
         "typePlaceholder": "Select an option",

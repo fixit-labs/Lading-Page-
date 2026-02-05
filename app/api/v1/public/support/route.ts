@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
-import nodemailer from 'nodemailer';
+import { Resend } from 'resend';
+
+// Initialize Resend with API key from environment
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 // Validation schema
 const supportSchema = z.object({
@@ -15,21 +18,13 @@ const supportSchema = z.object({
 
 // Support team email recipients
 const SUPPORT_EMAILS = [
-    'hernan.piedrahita@fixitg.com',
-    'yujasly.serna@fixitg.com',
+    'Hernan.piedrahita@fixitg.com',
     'juan.gonzalez@fixitg.com',
+    'yujasly.serna@fixitg.com',
 ];
 
-// Configure email transporter
-const transporter = nodemailer.createTransport({
-    host: process.env.SMTP_HOST,
-    port: parseInt(process.env.SMTP_PORT || '587'),
-    secure: process.env.SMTP_SECURE === 'true',
-    auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASSWORD,
-    },
-});
+// From email address (must be verified in Resend)
+const FROM_EMAIL = 'support@parkpool.tech';
 
 export async function POST(request: NextRequest) {
     try {
@@ -37,10 +32,10 @@ export async function POST(request: NextRequest) {
         const body = await request.json();
         const validatedData = supportSchema.parse(body);
 
-        // Send email to support team
-        await transporter.sendMail({
-            from: process.env.SMTP_FROM || 'noreply@parkpool.tech',
-            to: SUPPORT_EMAILS.join(', '),
+        // Send email to support team using Resend
+        const { data, error } = await resend.emails.send({
+            from: `ParkPool Support <${FROM_EMAIL}>`,
+            to: SUPPORT_EMAILS,
             replyTo: validatedData.email,
             subject: `[Soporte ParkPool] ${validatedData.requestTypeLabel} - ${validatedData.name}`,
             html: `
@@ -82,20 +77,12 @@ export async function POST(request: NextRequest) {
                     </div>
                 </div>
             `,
-            text: `
-Nueva Solicitud de Soporte - ParkPool
-
-Nombre: ${validatedData.name}
-Email: ${validatedData.email}
-Tipo de solicitud: ${validatedData.requestTypeLabel}
-
-Descripción:
-${validatedData.description}
-
----
-Enviado desde el formulario de soporte de ParkPool
-            `,
         });
+
+        if (error) {
+            console.error('Resend error:', error);
+            throw new Error(error.message);
+        }
 
         console.log('Support email sent successfully:', {
             name: validatedData.name,
