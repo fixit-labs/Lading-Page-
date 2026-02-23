@@ -196,6 +196,80 @@
         },
         "footerCta": "By using our services, you agree to these terms and conditions in full."
     },
+    "privacy": {
+        "backToHome": "Back to Home",
+        "index": "Index",
+        "title": "Privacy Policy",
+        "lastUpdated": "Last updated: January 2025",
+        "sections": {
+            "introduction": {
+                "id": "introduction",
+                "title": "Introduction",
+                "titleNumbered": "1. Introduction",
+                "content": "This Privacy Policy describes how ParKpool (\"we\", \"us\", or \"our\") collects, uses, and protects your personal information when you use our valet parking services."
+            },
+            "dataCollection": {
+                "id": "data-collection",
+                "title": "Data Collection",
+                "titleNumbered": "2. Data Collection",
+                "content": "We collect the following information:\n\n• Personal identification: Name, phone number, email address\n• Vehicle information: License plate, make, model, color, year\n• Service usage: Check-in/check-out times, parking duration, payment information\n• Photos: Vehicle condition at check-in and check-out\n• Location data: When using our mobile services"
+            },
+            "dataUse": {
+                "id": "data-use",
+                "title": "How We Use Your Data",
+                "titleNumbered": "3. How We Use Your Data",
+                "content": "Your information is used to:\n\n• Provide valet parking services\n• Process payments and manage reservations\n• Communicate about your service\n• Improve our platform and services\n• Comply with legal requirements\n• Marketing purposes (with your consent)"
+            },
+            "dataSharing": {
+                "id": "data-sharing",
+                "title": "Data Sharing",
+                "titleNumbered": "4. Data Sharing",
+                "content": "We may share your data with:\n\n• Valet parking operators providing the service\n• Payment processors (Stripe)\n• Fixit ecosystem partners for cross-marketing (with consent)\n• Legal authorities when required by law\n\nWe do not sell your personal information to third parties."
+            },
+            "dataRetention": {
+                "id": "data-retention",
+                "title": "Data Retention",
+                "titleNumbered": "5. Data Retention",
+                "content": "We retain your data:\n\n• For active accounts: Until account deletion\n• For transaction records: 7 years for tax purposes\n• For marketing leads: Until you opt out\n• Photos and inspections: 2 years for liability purposes"
+            },
+            "yourRights": {
+                "id": "your-rights",
+                "title": "Your Rights",
+                "titleNumbered": "6. Your Rights",
+                "content": "Under Florida law, you have the right to:\n\n• Access your personal data\n• Correct inaccurate information\n• Delete your data (subject to legal requirements)\n• Opt out of marketing communications\n• Data portability\n\nTo exercise these rights, contact legal@parkpool.com"
+            },
+            "security": {
+                "id": "security",
+                "title": "Data Security",
+                "titleNumbered": "7. Data Security",
+                "content": "We implement appropriate security measures including:\n\n• Encryption of sensitive data\n• Secure payment processing\n• Regular security audits\n• Limited access to personal information\n• Secure data storage and transmission"
+            },
+            "cookies": {
+                "id": "cookies",
+                "title": "Cookies and Tracking",
+                "titleNumbered": "8. Cookies and Tracking",
+                "content": "We use cookies and similar technologies to:\n\n• Remember your preferences\n• Analyze website usage\n• Provide personalized experiences\n• Ensure platform security\n\nYou can manage cookie preferences in your browser settings."
+            },
+            "changes": {
+                "id": "policy-changes",
+                "title": "Policy Changes",
+                "titleNumbered": "9. Policy Changes",
+                "content": "We may update this Privacy Policy periodically. We will notify you of significant changes through email or platform notifications. Continued use of our services constitutes acceptance of the updated policy."
+            },
+            "contact": {
+                "id": "privacy-contact",
+                "title": "Contact Information",
+                "titleNumbered": "10. Contact Information",
+                "emailLabel": "Email",
+                "email": "legal@parkpool.com",
+                "phoneLabel": "Phone",
+                "phone": "+1 (contact number in the U.S.)",
+                "addressLabel": "Address",
+                "address": "Florida, United States"
+            }
+        },
+        "footerCta": "Your privacy is important to us. Please review this policy to understand how we collect and use your information."
+    },
     "smsPolicy": {
         "backToHome": "Back to Home",
         "index": "Contents",
