@@ -736,7 +736,7 @@ const LandingPage = () => {
                     <div className="mt-16 pt-8 border-t border-white/10">
                         <div className="flex flex-wrap justify-center gap-6 text-white/70 text-sm font-medium">
                             <a href="/terms" className="hover:text-white transition-colors">{t.footer.terms}</a>
-                            <a href={`/terms#${t.terms.sections.privacy.id}`} className="hover:text-white transition-colors">{t.footer.privacy}</a>
+                            <a href="/privacy" className="hover:text-white transition-colors">{t.footer.privacy}</a>
                             <a href="/sms-policy" className="hover:text-white transition-colors">{t.footer.smsPolicy}</a>
                             <a href="/support" className="hover:text-white transition-colors">{t.footer.support}</a>
                             <a href="#" className="hover:text-white transition-colors">{t.footer.contact}</a>

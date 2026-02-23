@@ -196,6 +196,80 @@
         },
         "footerCta": "Al usar nuestros servicios, usted acepta estos términos y condiciones en su totalidad."
     },
+    "privacy": {
+        "backToHome": "Volver al Inicio",
+        "index": "Índice",
+        "title": "Política de Privacidad",
+        "lastUpdated": "Última actualización: Enero 2025",
+        "sections": {
+            "introduction": {
+                "id": "introduccion",
+                "title": "Introducción",
+                "titleNumbered": "1. Introducción",
+                "content": "Esta Política de Privacidad describe cómo ParKpool (\"nosotros\" o \"nuestro\") recopila, usa y protege su información personal cuando utiliza nuestros servicios de valet parking."
+            },
+            "dataCollection": {
+                "id": "recopilacion-datos",
+                "title": "Recopilación de Datos",
+                "titleNumbered": "2. Recopilación de Datos",
+                "content": "Recopilamos la siguiente información:\n\n• Identificación personal: Nombre, número de teléfono, correo electrónico\n• Información del vehículo: Placa, marca, modelo, color, año\n• Uso del servicio: Horas de check-in/check-out, duración del estacionamiento, información de pago\n• Fotografías: Condición del vehículo al momento del check-in y check-out\n• Datos de ubicación: Al utilizar nuestros servicios móviles"
+            },
+            "dataUse": {
+                "id": "uso-datos",
+                "title": "Cómo Usamos Sus Datos",
+                "titleNumbered": "3. Cómo Usamos Sus Datos",
+                "content": "Su información se utiliza para:\n\n• Prestar servicios de valet parking\n• Procesar pagos y gestionar reservas\n• Comunicarnos sobre su servicio\n• Mejorar nuestra plataforma y servicios\n• Cumplir con requisitos legales\n• Fines de marketing (con su consentimiento)"
+            },
+            "dataSharing": {
+                "id": "comparticion-datos",
+                "title": "Compartición de Datos",
+                "titleNumbered": "4. Compartición de Datos",
+                "content": "Podemos compartir sus datos con:\n\n• Operadores de valet parking que prestan el servicio\n• Procesadores de pago (Stripe)\n• Socios del ecosistema Fixit para marketing cruzado (con consentimiento)\n• Autoridades legales cuando lo exija la ley\n\nNo vendemos su información personal a terceros."
+            },
+            "dataRetention": {
+                "id": "retencion-datos",
+                "title": "Retención de Datos",
+                "titleNumbered": "5. Retención de Datos",
+                "content": "Retenemos sus datos:\n\n• Para cuentas activas: Hasta la eliminación de la cuenta\n• Para registros de transacciones: 7 años por fines fiscales\n• Para leads de marketing: Hasta que se dé de baja\n• Fotografías e inspecciones: 2 años por fines de responsabilidad"
+            },
+            "yourRights": {
+                "id": "sus-derechos",
+                "title": "Sus Derechos",
+                "titleNumbered": "6. Sus Derechos",
+                "content": "Bajo la ley de Florida, usted tiene derecho a:\n\n• Acceder a sus datos personales\n• Corregir información inexacta\n• Eliminar sus datos (sujeto a requisitos legales)\n• Cancelar las comunicaciones de marketing\n• Portabilidad de datos\n\nPara ejercer estos derechos, contacte a legal@parkpool.com"
+            },
+            "security": {
+                "id": "seguridad",
+                "title": "Seguridad de Datos",
+                "titleNumbered": "7. Seguridad de Datos",
+                "content": "Implementamos medidas de seguridad apropiadas que incluyen:\n\n• Cifrado de datos sensibles\n• Procesamiento seguro de pagos\n• Auditorías de seguridad periódicas\n• Acceso limitado a información personal\n• Almacenamiento y transmisión segura de datos"
+            },
+            "cookies": {
+                "id": "cookies",
+                "title": "Cookies y Seguimiento",
+                "titleNumbered": "8. Cookies y Seguimiento",
+                "content": "Utilizamos cookies y tecnologías similares para:\n\n• Recordar sus preferencias\n• Analizar el uso del sitio web\n• Proporcionar experiencias personalizadas\n• Garantizar la seguridad de la plataforma\n\nPuede gestionar las preferencias de cookies en la configuración de su navegador."
+            },
+            "changes": {
+                "id": "cambios-politica",
+                "title": "Cambios en la Política",
+                "titleNumbered": "9. Cambios en la Política",
+                "content": "Podemos actualizar esta Política de Privacidad periódicamente. Le notificaremos los cambios significativos a través de correo electrónico o notificaciones en la plataforma. El uso continuado de nuestros servicios constituye la aceptación de la política actualizada."
+            },
+            "contact": {
+                "id": "contacto-privacidad",
+                "title": "Información de Contacto",
+                "titleNumbered": "10. Información de Contacto",
+                "emailLabel": "Email",
+                "email": "legal@parkpool.com",
+                "phoneLabel": "Teléfono",
+                "phone": "+1 (número de contacto en EE.UU.)",
+                "addressLabel": "Dirección",
+                "address": "Florida, Estados Unidos"
+            }
+        },
+        "footerCta": "Su privacidad es importante para nosotros. Revise esta política para entender cómo recopilamos y usamos su información."
+    },
     "smsPolicy": {
         "backToHome": "Volver al Inicio",
         "index": "Contenido",
