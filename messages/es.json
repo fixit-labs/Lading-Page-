@@ -1,6 +1,6 @@
 {
     "navbar": {
-        "logo": "ParKpool",
+        "logo": "ParkPool",
         "solutions": "Soluciones",
         "security": "Seguridad",
         "pricing": "Precios",
@@ -47,7 +47,7 @@
     },
     "finalCta": {
         "title": "¿Listo para modernizar tu parking?",
-        "subtitle": "Únete a las empresas líderes que ya están transformando su operación con ParKpool",
+        "subtitle": "Únete a las empresas líderes que ya están transformando su operación con ParkPool",
         "cta": "Contactar Ventas"
     },
     "footer": {
@@ -56,11 +56,11 @@
         "smsPolicy": "Política SMS",
         "contact": "Contacto",
         "support": "Soporte",
-        "copyright": "© 2025 ParKpool. Todos los derechos reservados."
+        "copyright": "© 2025 ParkPool. Todos los derechos reservados."
     },
     "modal": {
         "title": "Agenda tu Demo",
-        "subtitle": "Descubre cómo ParKpool moderniza tu operación",
+        "subtitle": "Descubre cómo ParkPool moderniza tu operación",
         "nameLabel": "Nombre completo",
         "namePlaceholder": "Juan Pérez",
         "companyLabel": "Empresa / Parking",
@@ -71,7 +71,9 @@
         "phonePlaceholder": "+57 300 123 4567",
         "termsText": "He leído y acepto los",
         "termsLink": "Términos y Condiciones",
-        "termsAnd": "y la Política de Privacidad",
+        "termsAndText": "y la",
+        "privacyLink": "Política de Privacidad",
+        "smsConsent": "Al proporcionar su número de teléfono, acepta recibir notificaciones SMS de ParkPool. La frecuencia de los mensajes puede variar. Pueden aplicar tarifas estándar de mensajes y datos. Responda STOP para cancelar. Responda HELP para obtener ayuda.",
         "submitButton": "Solicitar Demo Gratuita",
         "submitting": "Enviando...",
         "successTitle": "¡Solicitud Recibida!",
@@ -116,7 +118,7 @@
                 "id": "aceptacion",
                 "title": "Aceptación",
                 "titleNumbered": "1. Aceptación",
-                "content": "El uso de los servicios de ParKpool implica la aceptación plena e incondicional de estos Términos y Condiciones por parte de las Empresas de Valet Parking y los usuarios finales."
+                "content": "Al acceder o utilizar ParkPool (\"el Servicio\" o \"la Plataforma\"), operado por Fixit Group LLC (\"nosotros\" o \"nuestro\"), usted acepta estar sujeto a estos Términos y Condiciones (\"Términos\"). El uso de los servicios de ParkPool implica la aceptación plena e incondicional de estos Términos y Condiciones por parte de las Empresas de Valet Parking y los usuarios finales."
             },
             "scope": {
                 "id": "alcance",
@@ -128,7 +130,7 @@
                 "id": "custodia",
                 "title": "Custodia y Responsabilidad",
                 "titleNumbered": "3. Custodia y Responsabilidad",
-                "content": "La responsabilidad comienza únicamente cuando el vehículo es recibido formalmente y se genera el ticket digital de entrada.\n\nLos incidentes ocurridos en la fila de espera antes del check-in no son responsabilidad de ParKpool ni del Operador.\n\nEl usuario otorga un mandato tácito al entregar las llaves, autorizando al Valet a conducir y resguardar el vehículo.\n\nLa custodia termina cuando el vehículo es entregado y marcado como \"Checked Out\" en el sistema."
+                "content": "La responsabilidad comienza únicamente cuando el vehículo es recibido formalmente y se genera el ticket digital de entrada.\n\nLos incidentes ocurridos en la fila de espera antes del check-in no son responsabilidad de ParkPool ni del Operador.\n\nEl usuario otorga un mandato tácito al entregar las llaves, autorizando al Valet a conducir y resguardar el vehículo.\n\nLa custodia termina cuando el vehículo es entregado y marcado como \"Checked Out\" en el sistema."
             },
             "evidence": {
                 "id": "evidencia",
@@ -140,13 +142,13 @@
                 "id": "pagos",
                 "title": "Tarifas y Pagos",
                 "titleNumbered": "5. Tarifas y Pagos",
-                "content": "Las tarifas son definidas por la Empresa de Valet y configuradas en el sistema.\n\nEl usuario acepta las tarifas antes de realizar el pago, el cual se realiza a través de un enlace digital (ej. Stripe).\n\nPagos adicionales por servicios complementarios (lavado, carga, asistencia) serán previamente informados y aceptados.\n\nParKpool no es responsable por fallas en pasarelas de pago externas."
+                "content": "Las tarifas son definidas por la Empresa de Valet y configuradas en el sistema.\n\nEl usuario acepta las tarifas antes de realizar el pago, el cual se realiza a través de un enlace digital (ej. Stripe).\n\nPagos adicionales por servicios complementarios (lavado, carga, asistencia) serán previamente informados y aceptados.\n\nParkPool no es responsable por fallas en pasarelas de pago externas."
             },
             "liability": {
                 "id": "responsabilidad",
                 "title": "Limitación de Responsabilidad",
                 "titleNumbered": "6. Limitación de Responsabilidad",
-                "content": "ParKpool no es responsable por daños derivados de fuerza mayor, negligencia del usuario o incidentes fuera del período de custodia.\n\nEn servicios futuros como \"Conductor Designado\" o \"Valet On-Demand\", la responsabilidad civil extracontractual será cubierta por pólizas de seguro específicas.\n\nParKpool no garantiza disponibilidad continua del servicio, pudiendo suspenderlo por mantenimiento o actualizaciones."
+                "content": "ParkPool no es responsable por daños derivados de fuerza mayor, negligencia del usuario o incidentes fuera del período de custodia.\n\nEn servicios futuros como \"Conductor Designado\" o \"Valet On-Demand\", la responsabilidad civil extracontractual será cubierta por pólizas de seguro específicas.\n\nParkPool no garantiza disponibilidad continua del servicio, pudiendo suspenderlo por mantenimiento o actualizaciones."
             },
             "userObligations": {
                 "id": "obligaciones-usuario",
@@ -164,19 +166,19 @@
                 "id": "privacidad",
                 "title": "Política de Datos Personales",
                 "titleNumbered": "9. Política de Datos Personales",
-                "content": "ParKpool recopila y retiene datos como placa, nombre y número de teléfono del usuario.\n\nEl usuario autoriza expresamente el uso de sus datos para fines comerciales cruzados con socios del ecosistema Fixit (seguros, mantenimiento, asistencia vial).\n\nLos datos pueden ser retenidos como \"leads calificados\" incluso después de finalizado el servicio.\n\nSe aplicará enriquecimiento de perfil para segmentación de marketing, siempre dentro de los límites legales del Florida Information Protection Act (FIPA) y otras leyes de privacidad aplicables en EE.UU.\n\nEl usuario puede ejercer sus derechos de acceso, rectificación y eliminación de datos de acuerdo con la legislación vigente de Florida."
+                "content": "ParkPool recopila y retiene datos como placa, nombre y número de teléfono del usuario.\n\nEl usuario autoriza expresamente el uso de sus datos para fines comerciales cruzados con socios del ecosistema Fixit (seguros, mantenimiento, asistencia vial).\n\nLos datos pueden ser retenidos como \"leads calificados\" incluso después de finalizado el servicio.\n\nSe aplicará enriquecimiento de perfil para segmentación de marketing, siempre dentro de los límites legales del Florida Information Protection Act (FIPA) y otras leyes de privacidad aplicables en EE.UU.\n\nEl usuario puede ejercer sus derechos de acceso, rectificación y eliminación de datos de acuerdo con la legislación vigente de Florida."
             },
             "intellectualProperty": {
                 "id": "propiedad-intelectual",
                 "title": "Propiedad Intelectual",
                 "titleNumbered": "10. Propiedad Intelectual",
-                "content": "Todo el software, marcas y contenido asociado a ParKpool son propiedad exclusiva de la empresa y no pueden ser reproducidos sin autorización."
+                "content": "Todo el software, marcas y contenido asociado a ParkPool son propiedad exclusiva de la empresa y no pueden ser reproducidos sin autorización."
             },
             "modifications": {
                 "id": "modificaciones",
                 "title": "Modificaciones",
                 "titleNumbered": "11. Modificaciones",
-                "content": "ParKpool puede actualizar estos Términos y Condiciones en cualquier momento, notificando a clientes y usuarios. El uso continuado del servicio implica la aceptación de las modificaciones."
+                "content": "ParkPool puede actualizar estos Términos y Condiciones en cualquier momento, notificando a clientes y usuarios. El uso continuado del servicio implica la aceptación de las modificaciones."
             },
             "jurisdiction": {
                 "id": "jurisdiccion",
@@ -206,7 +208,7 @@
                 "id": "introduccion",
                 "title": "Introducción",
                 "titleNumbered": "1. Introducción",
-                "content": "Esta Política de Privacidad describe cómo ParKpool (\"nosotros\" o \"nuestro\") recopila, usa y protege su información personal cuando utiliza nuestros servicios de valet parking."
+                "content": "Esta Política de Privacidad describe cómo ParkPool (\"nosotros\" o \"nuestro\") recopila, usa y protege su información personal cuando utiliza nuestros servicios de valet parking."
             },
             "dataCollection": {
                 "id": "recopilacion-datos",
@@ -224,7 +226,7 @@
                 "id": "comparticion-datos",
                 "title": "Compartición de Datos",
                 "titleNumbered": "4. Compartición de Datos",
-                "content": "Podemos compartir sus datos con:\n\n• Operadores de valet parking que prestan el servicio\n• Procesadores de pago (Stripe)\n• Socios del ecosistema Fixit para marketing cruzado (con consentimiento)\n• Autoridades legales cuando lo exija la ley\n\nNo vendemos su información personal a terceros."
+                "content": "Podemos compartir sus datos con:\n\n• Operadores de valet parking que prestan el servicio\n• Procesadores de pago (Stripe)\n• Socios del ecosistema Fixit para marketing cruzado (con consentimiento)\n• Autoridades legales cuando lo exija la ley\n\nNo compartiremos su aceptación a una campaña de SMS con terceros para fines no relacionados con la prestación de los servicios de dicha campaña. Podemos compartir sus Datos Personales, incluyendo su aceptación o estado de consentimiento de SMS, con terceros que nos ayuden a proporcionar nuestros servicios de mensajería, incluyendo, entre otros, proveedores de plataformas, compañías telefónicas y cualquier otro proveedor que nos asista en la entrega de mensajes de texto."
             },
             "dataRetention": {
                 "id": "retencion-datos",
@@ -250,16 +252,22 @@
                 "titleNumbered": "8. Cookies y Seguimiento",
                 "content": "Utilizamos cookies y tecnologías similares para:\n\n• Recordar sus preferencias\n• Analizar el uso del sitio web\n• Proporcionar experiencias personalizadas\n• Garantizar la seguridad de la plataforma\n\nPuede gestionar las preferencias de cookies en la configuración de su navegador."
             },
+            "communications": {
+                "id": "comunicaciones",
+                "title": "Comunicaciones",
+                "titleNumbered": "9. Comunicaciones",
+                "content": "Al proporcionar su número de teléfono, usted acepta recibir notificaciones SMS de ParkPool. La frecuencia de los mensajes puede variar. Pueden aplicar tarifas estándar de mensajes y datos. Responda STOP para cancelar. Responda HELP para obtener ayuda. No compartiremos la información móvil con terceros con fines promocionales o de marketing."
+            },
             "changes": {
                 "id": "cambios-politica",
                 "title": "Cambios en la Política",
-                "titleNumbered": "9. Cambios en la Política",
+                "titleNumbered": "10. Cambios en la Política",
                 "content": "Podemos actualizar esta Política de Privacidad periódicamente. Le notificaremos los cambios significativos a través de correo electrónico o notificaciones en la plataforma. El uso continuado de nuestros servicios constituye la aceptación de la política actualizada."
             },
             "contact": {
                 "id": "contacto-privacidad",
                 "title": "Información de Contacto",
-                "titleNumbered": "10. Información de Contacto",
+                "titleNumbered": "11. Información de Contacto",
                 "emailLabel": "Email",
                 "email": "legal@parkpool.com",
                 "phoneLabel": "Teléfono",

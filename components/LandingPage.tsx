@@ -72,7 +72,7 @@ const LandingPage = () => {
                         <div className="flex-shrink-0">
                             <img
                                 src="/images/light-logo.svg"
-                                alt="ParKpool"
+                                alt="ParkPool"
                                 className={`w-auto transition-all duration-300 ${
                                     isScrolled ? 'h-8 sm:h-10' : 'h-10 sm:h-12'
                                 }`}

@@ -3,7 +3,7 @@ import './globals.css';
 import { Providers } from '@/components/Providers';
 
 export const metadata: Metadata = {
-    title: 'ParKpool - The Operating System for Valet Parking Companies',
+    title: 'ParkPool - The Operating System for Valet Parking Companies',
     description: 'Digitize your operation, eliminate cash fraud, and reduce delivery times by 40%.',
 };
 

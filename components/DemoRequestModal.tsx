@@ -21,6 +21,7 @@ export default function DemoRequestModal({ isOpen, onClose }: DemoRequestModalPr
     const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
     const [errorMessage, setErrorMessage] = useState('');
     const [termsAccepted, setTermsAccepted] = useState(false);
+    const [smsConsent, setSmsConsent] = useState(false);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -293,7 +294,42 @@ export default function DemoRequestModal({ isOpen, onClose }: DemoRequestModalPr
                                             >
                                                 {t.modal.termsLink}
                                             </a>
-                                            {' '}{t.modal.termsAnd}
+                                            {' '}{t.modal.termsAndText}{' '}
+                                            <a
+                                                href="/privacy"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                style={{
+                                                    color: '#0A62F8',
+                                                    fontWeight: 'bold',
+                                                    textDecoration: 'none',
+                                                }}
+                                                onClick={(e) => e.stopPropagation()}
+                                            >
+                                                {t.modal.privacyLink}
+                                            </a>
+                                        </span>
+                                    </label>
+                                </div>
+
+                                {/* SMS Consent Checkbox (Optional) */}
+                                <div style={{ marginBottom: '1.5rem' }}>
+                                    <label style={{ display: 'flex', alignItems: 'start', gap: '0.75rem', cursor: 'pointer' }}>
+                                        <input
+                                            type="checkbox"
+                                            checked={smsConsent}
+                                            onChange={(e) => setSmsConsent(e.target.checked)}
+                                            style={{
+                                                width: '1.25rem',
+                                                height: '1.25rem',
+                                                marginTop: '0.125rem',
+                                                cursor: 'pointer',
+                                                accentColor: '#0A62F8',
+                                                flexShrink: 0,
+                                            }}
+                                        />
+                                        <span style={{ fontSize: '0.75rem', color: '#6b7280', lineHeight: '1.5' }}>
+                                            {t.modal.smsConsent}
                                         </span>
                                     </label>
                                 </div>

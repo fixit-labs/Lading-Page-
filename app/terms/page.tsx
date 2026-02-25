@@ -77,7 +77,7 @@ export default function TermsPage() {
                     <Link href="/" className="flex-shrink-0">
                         <img
                             src="/images/light-logo.svg"
-                            alt="ParKpool"
+                            alt="ParkPool"
                             className="h-8 sm:h-10 w-auto"
                             style={{ filter: 'brightness(0) saturate(100%)' }}
                         />

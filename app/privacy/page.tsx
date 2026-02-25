@@ -20,6 +20,7 @@ export default function PrivacyPage() {
         { id: t.privacy.sections.yourRights.id, title: t.privacy.sections.yourRights.title },
         { id: t.privacy.sections.security.id, title: t.privacy.sections.security.title },
         { id: t.privacy.sections.cookies.id, title: t.privacy.sections.cookies.title },
+        { id: t.privacy.sections.communications.id, title: t.privacy.sections.communications.title },
         { id: t.privacy.sections.changes.id, title: t.privacy.sections.changes.title },
         { id: t.privacy.sections.contact.id, title: t.privacy.sections.contact.title },
     ];
@@ -74,7 +75,7 @@ export default function PrivacyPage() {
                     <Link href="/" className="flex-shrink-0">
                         <img
                             src="/images/light-logo.svg"
-                            alt="ParKpool"
+                            alt="ParkPool"
                             className="h-8 sm:h-10 w-auto"
                             style={{ filter: 'brightness(0) saturate(100%)' }}
                         />
@@ -216,7 +217,17 @@ export default function PrivacyPage() {
                                 </div>
                             </section>
 
-                            {/* Section 9: Policy Changes */}
+                            {/* Section 9: Communications */}
+                            <section id={t.privacy.sections.communications.id} className="mb-16 scroll-mt-24">
+                                <h2 className="text-2xl sm:text-3xl font-black text-midnight-navy mb-6">
+                                    {t.privacy.sections.communications.titleNumbered}
+                                </h2>
+                                <div className="prose prose-lg max-w-none text-midnight-navy/80 font-medium leading-relaxed space-y-4">
+                                    <p className="whitespace-pre-line">{t.privacy.sections.communications.content}</p>
+                                </div>
+                            </section>
+
+                            {/* Section 10: Policy Changes */}
                             <section id={t.privacy.sections.changes.id} className="mb-16 scroll-mt-24">
                                 <h2 className="text-2xl sm:text-3xl font-black text-midnight-navy mb-6">
                                     {t.privacy.sections.changes.titleNumbered}
@@ -226,7 +237,7 @@ export default function PrivacyPage() {
                                 </div>
                             </section>
 
-                            {/* Section 10: Contact */}
+                            {/* Section 11: Contact */}
                             <section id={t.privacy.sections.contact.id} className="mb-16 scroll-mt-24">
                                 <h2 className="text-2xl sm:text-3xl font-black text-midnight-navy mb-6">
                                     {t.privacy.sections.contact.titleNumbered}
