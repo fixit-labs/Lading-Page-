@@ -103,6 +103,8 @@
         "submitting": "Sending...",
         "successTitle": "Request Sent!",
         "successMessage": "Our support team will contact you soon",
+        "ticketLabel": "Ticket number",
+        "ticketHint": "Save this number to track your request",
         "errorConnection": "Connection error. Please try again.",
         "errorGeneric": "Error sending request"
     },
