@@ -19,6 +19,7 @@ export default function SupportPage() {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
     const [errorMessage, setErrorMessage] = useState('');
+    const [ticketNumber, setTicketNumber] = useState<string | null>(null);
 
     const requestTypes: { value: RequestType; label: string }[] = [
         { value: 'webIssue', label: t.support.typeOptions.webIssue },
@@ -50,6 +51,7 @@ export default function SupportPage() {
 
             if (response.ok) {
                 setSubmitStatus('success');
+                setTicketNumber(data.ticketNumber || null);
                 setFormData({ name: '', email: '', requestType: '', description: '' });
             } else {
                 setSubmitStatus('error');
@@ -131,9 +133,22 @@ export default function SupportPage() {
                             <h2 className="text-2xl font-black text-midnight-navy mb-2">
                                 {t.support.successTitle}
                             </h2>
-                            <p className="text-midnight-navy/60 mb-6">
+                            <p className="text-midnight-navy/60 mb-4">
                                 {t.support.successMessage}
                             </p>
+                            {ticketNumber && (
+                                <div className="bg-azure-blue/10 border border-azure-blue/20 rounded-xl p-4 mb-6">
+                                    <p className="text-sm text-midnight-navy/60 mb-1">
+                                        {t.support.ticketLabel || 'Número de ticket'}
+                                    </p>
+                                    <p className="text-2xl font-black text-azure-blue">
+                                        {ticketNumber}
+                                    </p>
+                                    <p className="text-xs text-midnight-navy/50 mt-2">
+                                        {t.support.ticketHint || 'Guarda este número para dar seguimiento a tu solicitud'}
+                                    </p>
+                                </div>
+                            )}
                             <Link
                                 href="/"
                                 className="inline-flex items-center gap-2 px-6 py-3 bg-azure-blue text-white rounded-xl font-bold hover:shadow-lg hover:shadow-azure-blue/30 transition-all"

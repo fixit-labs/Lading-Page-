@@ -92,24 +92,29 @@ export async function POST(request: NextRequest) {
         });
 
         // Create ticket in Chatwoot for centralized management
+        let ticketNumber: string | null = null;
         try {
-            await createSupportTicket({
+            const chatwootResult = await createSupportTicket({
                 name: validatedData.name,
                 email: validatedData.email,
                 requestType: validatedData.requestType,
                 requestTypeLabel: validatedData.requestTypeLabel,
                 description: validatedData.description,
             });
+            if (chatwootResult) {
+                ticketNumber = `PP-${chatwootResult.conversationId}`;
+            }
         } catch (chatwootError) {
             // Log but don't fail the request if Chatwoot fails
             console.error('Chatwoot ticket creation failed:', chatwootError);
         }
 
-        // Return success
+        // Return success with ticket number
         return NextResponse.json(
             {
                 success: true,
                 message: '¡Solicitud enviada! Te contactaremos pronto',
+                ticketNumber,
             },
             { status: 201 }
         );
