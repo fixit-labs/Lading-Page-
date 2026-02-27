@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { Providers } from '@/components/Providers';
+import ChatwootWidget from '@/components/ChatwootWidget';
 
 export const metadata: Metadata = {
     title: 'ParkPool - The Operating System for Valet Parking Companies',
@@ -26,6 +27,7 @@ export default function RootLayout({
                 <Providers>
                     {children}
                 </Providers>
+                <ChatwootWidget />
             </body>
         </html>
     );

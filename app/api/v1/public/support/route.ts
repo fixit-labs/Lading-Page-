@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 import { Resend } from 'resend';
+import { createSupportTicket } from '@/lib/chatwoot';
 
 // Initialize Resend with API key from environment
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -89,6 +90,20 @@ export async function POST(request: NextRequest) {
             email: validatedData.email,
             requestType: validatedData.requestType,
         });
+
+        // Create ticket in Chatwoot for centralized management
+        try {
+            await createSupportTicket({
+                name: validatedData.name,
+                email: validatedData.email,
+                requestType: validatedData.requestType,
+                requestTypeLabel: validatedData.requestTypeLabel,
+                description: validatedData.description,
+            });
+        } catch (chatwootError) {
+            // Log but don't fail the request if Chatwoot fails
+            console.error('Chatwoot ticket creation failed:', chatwootError);
+        }
 
         // Return success
         return NextResponse.json(
