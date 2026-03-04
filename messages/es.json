@@ -293,7 +293,7 @@
                 "titleNumbered": "1. Proceso de Recopilación de Consentimiento Verbal",
                 "intro": "Cuando los clientes utilizan nuestro servicio de valet parking, nuestro personal recopila su número de teléfono usando el siguiente guión de consentimiento verbal:",
                 "scriptLabel": "Guión del Personal",
-                "script": "¿Me puede dar su número de teléfono? Le enviaremos un mensaje de texto con su ticket de estacionamiento y le notificaremos cuando su vehículo esté listo para ser recogido. Puede responder STOP en cualquier momento para dejar de recibir mensajes.",
+                "script": "Al proporcionar su número de teléfono, usted acepta recibir alertas y actualizaciones por SMS de ParkPool. La frecuencia de los mensajes puede variar. Pueden aplicar tarifas estándar de mensajes y datos. Responda STOP para cancelar. Responda HELP para obtener ayuda. No compartiremos información móvil con terceros con fines promocionales o de marketing.",
                 "conclusion": "Al proporcionar su número de teléfono a nuestro personal de valet, los clientes dan su consentimiento para recibir notificaciones SMS relacionadas con su servicio de estacionamiento."
             },
             "messageTypes": {

@@ -293,7 +293,7 @@
                 "titleNumbered": "1. Verbal Consent Collection Process",
                 "intro": "When customers use our valet parking service, our staff collects their phone number using the following verbal consent script:",
                 "scriptLabel": "Staff Script",
-                "script": "May I have your phone number? We will send you a text message with your parking ticket and notify you when your vehicle is ready for pickup. You can reply STOP at any time to opt out of messages.",
+                "script": "By providing your phone number, you agree to receive SMS alerts and updates from ParkPool. Message frequency may vary. Standard Message and Data Rates may apply. Reply STOP to opt out. Reply HELP for help. We will not share mobile information with third parties for promotional or marketing purposes.",
                 "conclusion": "By providing their phone number to our valet staff, customers consent to receive SMS notifications related to their parking service."
             },
             "messageTypes": {
