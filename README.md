@@ -92,7 +92,7 @@ El diseño sigue los principios "Antigravity":
 - Limpio y moderno
 - Colores vibrantes de marca
 - Animaciones suaves con Framer Motion
-- Responsive design
+- Responsive design.
 
 ## 📝 To-Do
 
